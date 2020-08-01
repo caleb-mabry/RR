@@ -1,32 +1,31 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    <router-view />
   </div>
 </template>
 
+<script>
+import NavBar from "./components/Navbar/NavBar";
+export default {
+  components: {
+    NavBar,
+  },
+};
+</script>
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(2, 55, 241, 0) 0%, #2d2c2c 93.23%),
+    #8c9cef;
+  width: 100%;
+  position: relative;
 }
-
-#nav {
-  padding: 30px;
+html,
+body {
+  position: relative;
+  height: 100%;
 }
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
+.navbar {
+  background-color: #4c2b2b;
 }
 </style>
