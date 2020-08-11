@@ -1,28 +1,28 @@
 <template>
-  <b-container fluid style="height: 100%">
-    <b-row>
-      <b-col class="d-none d-lg-block" style="padding-right: 0px; padding-left: 0px">
-        <b-img class="testing" :src="require('../assets/RippingResource.jpg')" />
-      </b-col>
-      <b-col style="padding-left: 0px">
-        <b-row class="removeMarginLeft" style="height: 5%;">
+  <div class="container">
+    <main class="card">
+      <div class="left">
+        <img id="image" :src="require('../assets/RippingResource.jpg')" alt />
+      </div>
+      <div class="right">
+        <div class="right-top">
           <NavBar />
-        </b-row>
-        <b-row class="removeMarginLeft" style="height: 30%;">
-          <h1 class="text-bottom">The Ripping Resource</h1>
-        </b-row>
-        <b-row class="information removeMarginLeft" style="height: 65%;">
-          <p class="information_text">
+        </div>
+        <div class="right-middle">
+          <h1 id="title">The Ripping Resource</h1>
+        </div>
+        <div class="right-bottom">
+          <p id="description">
             The Ripping Resource is a website where you can access High Definiton rips of Ace Attorney models and sprites to upgrade characters for Attorney Online. Depending on what Server you're from, some of the GIFs will have to be renamed. The point of this website is that, if you were to just download every single character in HD, your filesize would explode, which is why you are intended to pick which characters you wish to upgrade.
             <br />
             <br />It is recommended that you get a fullscreen theme for Attorney Online. You can also submit your own HD rips to help us grow. We're not just a HD rips website, however. Our Discord is a ripping community, where you can learn, share, and ask questions, and generally just hang out!
             <br />
             <br />We are affiliated with Team Turnabout, go check them out!
           </p>
-        </b-row>
-      </b-col>
-    </b-row>
-  </b-container>
+        </div>
+      </div>
+    </main>
+  </div>
 </template>
 
 <script>
@@ -37,44 +37,100 @@ export default {
 };
 </script>
 <style scoped>
-.testing {
-  position: relative;
+main {
+  display: flex;
+  width: 65%;
+  height: fit-content;
+  border-radius: 5px;
+   background: rgb(110,122,195);
+background: linear-gradient(90deg, rgba(110,122,195,1) 0%, rgba(77,85,138,1) 48%, rgba(54,60,96,1) 100%); 
+}
+.card {
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 20px 15px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.container {
+  display: flex;
   width: 100%;
-  height: 100%;
+  justify-content: center;
+  align-items: center;
 }
-h1 {
-  padding-left: 2%;
-  font-size: 3vw;
+.left {
+  max-width: 50%;
 }
-.text-bottom {
-  margin-top: auto;
-  font-weight: bolder;
-  text-decoration: underline;
-  color: whitesmoke;
+.right {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
   position: relative;
-  bottom: -15px;
 }
-p {
+.text {
   padding: 2%;
-  font-weight: bold;
 }
-.removeMarginLeft {
-  margin-left: 0;
+.right-top {
+  height: fit-content;
+  width: auto;
 }
-.information {
-  background: linear-gradient(180deg, #050506 0%, rgba(27, 46, 255, 0) 100%),
-    #11121d;
+#image {
+  max-width: 100%;
+  height: auto;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
 }
-.information_text {
-  font-size: 1.5vw;
-  color: white;
+#description {
+  font-size: 1.1vw;
 }
-.fill {
-  min-height: 100%;
-  height: 100%;
-}
-.mainImage {
+.right-middle {
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  height: 15%;
   width: 100%;
-  max-height: 100%;
+}
+#title {
+  color: whitesmoke;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  text-decoration: underline;
+  bottom: 0px;
+  font-size: 2.6vw;
+  flex-wrap: wrap;
+}
+.right-bottom, .right-middle {
+  align-items: center;
+  padding: 3%
+}
+.right-bottom {
+  height: auto;
+  color: white;
+  height: 70%;
+  position: relative;
+  background: rgb(18,24,31);
+background: linear-gradient(90deg, rgba(18,24,31,1) 0%, rgba(50,67,85,1) 100%); 
+}
+
+@media only screen and (max-width: 918px) {
+  .container {
+    background: url("../assets/RippingResource.jpg");
+  }
+  #image {
+    display: none;
+  }
+  .left {
+    display: none;
+  }
+  .right {
+    background-color: black;
+    color: white;
+    width: 100%;
+  }
 }
 </style>

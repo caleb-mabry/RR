@@ -13,17 +13,12 @@ export default {
 };
 </script>
 <style>
-#app {
+html, body, #app {
+  box-sizing: border-box;
   height: 100%;
-  background: linear-gradient(180deg, rgba(2, 55, 241, 0) 0%, #2d2c2c 93.23%),
-    #8c9cef;
-  width: 100%;
-  position: relative;
-}
-html,
-body {
-  position: relative;
-  height: 100%;
+    transition: 0.3s;
+   background: rgb(87,123,173);
+background: radial-gradient(circle, rgba(87,123,173,1) 65%, rgba(53,57,86,1) 100%); 
 }
 .navbar {
   background-color: #4c2b2b;
