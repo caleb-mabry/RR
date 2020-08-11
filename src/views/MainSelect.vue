@@ -48,7 +48,12 @@ export default {
   },
   computed: {
     selectedEpisode() {
+        if (this.$route.params.characterEpisode) {
         return Characters[this.$route.params.characterEpisode].name
+
+        } else {
+            return ''
+        }
     },
     allCharacters() {
         let allKeys = Object.keys(Characters)
