@@ -63,7 +63,7 @@ background: linear-gradient(90deg, rgba(110,122,195,1) 0%, rgba(77,85,138,1) 48%
   align-items: center;
 }
 .left {
-  max-width: 50%;
+  width: 50%;
 }
 .right {
   display: flex;
@@ -76,10 +76,9 @@ background: linear-gradient(90deg, rgba(110,122,195,1) 0%, rgba(77,85,138,1) 48%
 }
 .right-top {
   height: fit-content;
-  width: auto;
 }
 #image {
-  max-width: 100%;
+  width: 100%;
   height: auto;
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
@@ -92,7 +91,7 @@ background: linear-gradient(90deg, rgba(110,122,195,1) 0%, rgba(77,85,138,1) 48%
   padding: 0px;
   position: relative;
   height: 15%;
-  width: 100%;
+  flex-wrap: wrap;
 }
 #title {
   color: whitesmoke;
