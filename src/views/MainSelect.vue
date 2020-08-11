@@ -1,13 +1,11 @@
 <template>
 <div>
-    <div v-if="doesCharacterEpisodeExist">
+    <div v-if="doesCharacterEpisodeExist" class="container">
         <router-link to="/Characters">Back</router-link>
-        <div v-for="item in charactersInEpisode" :key="item.id">
-            {{ item }}
-        </div>
+            <img v-for="item in charactersInEpisode" :key="item.id" :src="require('../assets/'+item+'.jpg')" class="tile-image" />
     </div>
-  <div v-else v-for="item in allCharacters" :key="item.id">
-      <router-link :to="{ name:'Episode', params: {characterEpisode: item}}">{{item}}</router-link >
+  <div v-else  class="container">
+     <router-link v-for="item in allCharacters" :key="item.id" :to="{ name:'Episode', params: {characterEpisode: item}}" class="link"> <img :src="require('../assets/'+item+'.png')" class="tile-image" /></router-link >
   </div>
 </div>
 </template>
@@ -44,6 +42,16 @@ computed: {
 }
 </script>
 
-<style>
-
+<style scoped>
+.container {
+    display: flex;
+    width: 50%;
+}
+.link {
+    padding: 0px;
+    
+}
+.tile-image {
+    width: 100%;
+}
 </style>
