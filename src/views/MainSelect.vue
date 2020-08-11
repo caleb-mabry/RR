@@ -1,10 +1,8 @@
 <template>
   <div>
-    <div v-if="doesCharacterEpisodeExist" class="container">
-      <router-link to="/Characters">Back</router-link>
-      <img v-for="item in charactersInEpisode" :key="item.id" :src="imageName(item)" class="tile-image" />
-    </div>
-    <div v-else class="container">
+    <router-link to="/">Back</router-link>
+
+    <div class="container">
       <router-link
         v-for="item in allCharacters"
         :key="item.id"
@@ -13,6 +11,19 @@
       >
         <img :src="require('../assets/'+item+'.png')" class="tile-image" />
       </router-link>
+    </div>
+    
+    <h1 id="selected-episode">{{selectedEpisode}}</h1>
+
+    <div v-if="doesCharacterEpisodeExist" class="container">
+        <a href="#">
+      <img
+        v-for="item in charactersInEpisode"
+        :key="item.id"
+        :src="imageName(item)"
+        class="character-image"
+      />
+        </a>
     </div>
   </div>
 </template>
@@ -23,7 +34,6 @@ import Characters from "../assets/Characters.json";
 export default {
   data() {
     return {
-      selectedEpisode: this.$route.params.characterEpisode,
       selectedCharacterPath: "",
     };
   },
@@ -37,8 +47,12 @@ export default {
     },
   },
   computed: {
+    selectedEpisode() {
+        return Characters[this.$route.params.characterEpisode].name
+    },
     allCharacters() {
-      return Object.keys(Characters);
+        let allKeys = Object.keys(Characters)
+      return allKeys;
     },
     doesCharacterEpisodeExist() {
       if (this.$route.params.characterEpisode == undefined) {
@@ -48,11 +62,10 @@ export default {
       }
     },
     charactersInEpisode() {
-      if (this.$route.params.characterEpisode) {
-        console.log(
-          Object.keys(Characters[this.$route.params.characterEpisode])
-        );
-        return Object.keys(Characters[this.$route.params.characterEpisode]);
+      if (this.$route.params.characterEpisode ) {
+        let allKeys = Object.keys(Characters[this.$route.params.characterEpisode])
+        let removeName = allKeys.splice(0,1) 
+        return allKeys;
       } else {
         return [];
       }
@@ -64,12 +77,33 @@ export default {
 <style scoped>
 .container {
   display: flex;
+  width: 75%;
+  padding: 5%;
+  background-color: pink;
+  justify-content: space-evenly;
+  margin: auto;
+}
+a {
+  border: 0px;
+  margin: auto;
+  padding: 0px;
   width: 50%;
 }
+
 .link {
-  padding: 0px;
+  padding: 2px;
+  background-color: none;
+
 }
 .tile-image {
-  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+#selected-episode {
+    text-align: center;
+}
+.character-image {
+    width: 50px;
+    height: 50px;
 }
 </style>

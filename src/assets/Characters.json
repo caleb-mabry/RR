@@ -1,5 +1,6 @@
 {
     "trilogy": {
+        "name": "Trilogy",
         "gumshoe": {
 
         },
@@ -20,6 +21,7 @@
         }
     },
     "apollojustice": {
+        "name": "Apollo Justice",
         "court": {
             
         },
@@ -43,6 +45,7 @@
         }
     },
     "investigations": {
+        "name": "Investigations",
         "edgeworth": {
             
         },
@@ -60,6 +63,7 @@
         }
     },
     "investigations2": {
+        "name": "Investigations 2",
         "backgrounds": {
 
         },
@@ -80,11 +84,13 @@
         }
     },
     "plvaa": {
+        "name": "PLvAA",
         "boistrum": {
             
         }
     },
     "dualdestinies": {
+        "name": "Dual Destinies",
         "bobby": {
 
         },
@@ -93,6 +99,7 @@
         }
     },
     "soj": {
+        "name": "SOJ",
         "phoenix": {
 
         },
@@ -104,11 +111,12 @@
         }
     },
     "dgs1+2": {
+        "name": "DGS 1+2",
         "yuujin": {
 
         },
         "haori": {
-            
+
         }
     }
 }
