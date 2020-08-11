@@ -25,8 +25,6 @@ computed: {
         return Object.keys(Characters)
     },
     doesCharacterEpisodeExist() {
-        console.log(this.$route.params.characterEpisode)
-
         if (this.$route.params.characterEpisode == undefined) {
             return false;
         }
@@ -35,7 +33,12 @@ computed: {
         }
     },
     charactersInEpisode() {
-        return Object.keys(Characters[this.selectedEpisode])
+        if (this.$route.params.characterEpisode) {
+            return Object.keys(Characters[this.$route.params.characterEpisode]) 
+        }
+        else {
+            return []
+        }
     }
 },
 }
