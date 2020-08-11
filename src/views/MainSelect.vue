@@ -85,7 +85,7 @@ export default {
   width: 75%;
   padding: 5%;
     background: linear-gradient(90deg, rgba(18,24,31,1) 0%, rgba(50,67,85,1) 100%); 
-  justify-content: space-between;
+  justify-content: space-around;
   margin: auto;
 }
 a {
@@ -103,13 +103,12 @@ a {
    opacity: .6;
 }
 .link {
-  padding: 5px;
+  padding: 1px;
   transition: all .2s;
   margin: 5px;
   width: 15%;
   height: fit-content;
   align-self: center;
-  background-color: whitesmoke;
 }
 .link:hover {
     opacity: .6;
