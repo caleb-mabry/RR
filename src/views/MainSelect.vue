@@ -14,17 +14,19 @@
     </div>
 
     <h1 id="selected-episode">{{selectedEpisode}}</h1>
-          <transition
-        name="fade"
-        mode="out-in"
-      >
-    <div v-if="doesCharacterEpisodeExist" class="container">
-      <a v-for="item in charactersInEpisode" :key="item.id" :href="s3BucketPath(item)" class="link">
-        <img :src="imageName(item)" class="character-image" />                    
-      </a>
-    </div>
-    </transition>
-    
+    <transition name="fade" mode="out-in">
+      <div v-if="doesCharacterEpisodeExist" class="container">
+        <transition-group name="list-complete" class="list-transition">
+          <a
+            v-for="item in charactersInEpisode"
+            :key="item"
+            :href="s3BucketPath(item)"
+            class="link"
+          >
+            <img :src="imageName(item)" class="character-image" />
+          </a>
+        </transition-group>
+      </div>
     </transition>
   </div>
 </template>
@@ -39,11 +41,12 @@ export default {
     };
   },
   methods: {
-      s3BucketPath: function(item) {
-          let folder = Characters[this.$route.params.characterEpisode].folder
-          let filename = Characters[this.$route.params.characterEpisode][item].filename
-          return `${this.fileUrl}/${folder}/${filename}`
-      },
+    s3BucketPath: function (item) {
+      let folder = Characters[this.$route.params.characterEpisode].folder;
+      let filename =
+        Characters[this.$route.params.characterEpisode][item].filename;
+      return `${this.fileUrl}/${folder}/${filename}`;
+    },
     imageName(name) {
       try {
         return require("../assets/" + name + ".png");
@@ -54,6 +57,7 @@ export default {
   },
   computed: {
     selectedEpisode() {
+      console.log(this.selectedCharacterPath);
       if (this.$route.params.characterEpisode) {
         return Characters[this.$route.params.characterEpisode].name;
       } else {
@@ -136,5 +140,25 @@ a {
 .character-image {
   width: 100%;
   height: auto;
+}
+.list-complete-item {
+  transition: all 1s;
+  display: inline-block;
+  margin-right: 10px;
+}
+.list-complete-enter, .list-complete-leave-to
+/* .list-complete-leave-active below version 2.1.8 */ {
+  opacity: 0;
+  transform: translateX(50px);
+    transition: all .2s;
+
+}
+.list-complete-leave-active {
+  position: absolute;
+}
+.list-transition{
+    display: flex;
+    position: relative;
+    width: 100%;
 }
 </style>
