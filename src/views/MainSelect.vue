@@ -12,17 +12,13 @@
         <img :src="require('../assets/'+item+'.png')" class="tile-image" />
       </router-link>
     </div>
-    
+
     <h1 id="selected-episode">{{selectedEpisode}}</h1>
 
     <div v-if="doesCharacterEpisodeExist" class="container">
-        <a         v-for="item in charactersInEpisode"
-        :key="item.id" href="#" class="link">
-      <img
-        :src="imageName(item)"
-        class="character-image"
-      />
-        </a>
+      <a v-for="item in charactersInEpisode" :key="item.id" :href="s3BucketPath(item)" class="link">
+        <img :src="imageName(item)" class="character-image" />
+      </a>
     </div>
   </div>
 </template>
@@ -33,10 +29,16 @@ import Characters from "../assets/Characters.json";
 export default {
   data() {
     return {
+      fileUrl: "https://ripping-resource.s3.amazonaws.com",
       selectedCharacterPath: "",
     };
   },
   methods: {
+      s3BucketPath: function(item) {
+          let folder = Characters[this.$route.params.characterEpisode].folder
+          let filename = Characters[this.$route.params.characterEpisode][item].filename
+          return `${this.fileUrl}/${folder}/${filename}`
+      },
     imageName(name) {
       try {
         return require("../assets/" + name + ".png");
@@ -47,15 +49,14 @@ export default {
   },
   computed: {
     selectedEpisode() {
-        if (this.$route.params.characterEpisode) {
-        return Characters[this.$route.params.characterEpisode].name
-
-        } else {
-            return ''
-        }
+      if (this.$route.params.characterEpisode) {
+        return Characters[this.$route.params.characterEpisode].name;
+      } else {
+        return "";
+      }
     },
     allCharacters() {
-        let allKeys = Object.keys(Characters)
+      let allKeys = Object.keys(Characters);
       return allKeys;
     },
     doesCharacterEpisodeExist() {
@@ -66,9 +67,11 @@ export default {
       }
     },
     charactersInEpisode() {
-      if (this.$route.params.characterEpisode ) {
-        let allKeys = Object.keys(Characters[this.$route.params.characterEpisode])
-        let removeName = allKeys.splice(0,1) 
+      if (this.$route.params.characterEpisode) {
+        let allKeys = Object.keys(
+          Characters[this.$route.params.characterEpisode]
+        );
+        let removeName = allKeys.splice(0, 2);
         return allKeys;
       } else {
         return [];
@@ -84,7 +87,11 @@ export default {
   flex-wrap: wrap;
   width: 75%;
   padding: 5%;
-    background: linear-gradient(90deg, rgba(18,24,31,1) 0%, rgba(50,67,85,1) 100%); 
+  background: linear-gradient(
+    90deg,
+    rgba(18, 24, 31, 1) 0%,
+    rgba(50, 67, 85, 1) 100%
+  );
   justify-content: space-around;
   margin: auto;
 }
@@ -96,22 +103,22 @@ a {
 }
 
 .link-title {
-    width: 10%;
-    margin: 5px;
+  width: 10%;
+  margin: 5px;
 }
 .link-title:hover {
-   opacity: .6;
+  opacity: 0.6;
 }
 .link {
   padding: 1px;
-  transition: all .2s;
+  transition: all 0.2s;
   margin: 5px;
   width: 15%;
   height: fit-content;
   align-self: center;
 }
 .link:hover {
-    opacity: .6;
+  opacity: 0.6;
 }
 .tile-image {
   max-width: 100%;
@@ -119,10 +126,10 @@ a {
 }
 
 #selected-episode {
-    text-align: center;
+  text-align: center;
 }
 .character-image {
-    width: 183px;
-    height: 183px;
+  width: 100%;
+  height: auto;
 }
 </style>

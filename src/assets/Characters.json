@@ -1,122 +1,130 @@
 {
     "trilogy": {
         "name": "Trilogy",
+        "folder": "Tri",
         "gumshoe": {
-
+            "filename": "Gumshoe.7z"
         },
         "lisa": {
-
+            "filename": "Lisa-Basil.zip"
         },
         "polly": {
-
+            "filename": "Polly.zip"
         },
         "desiree": {
-
+            "filename": "Desiree.zip"
         },
         "matt": {
-
+            "filename": "Matt-Engarde.zip"
         },
         "godot": {
-
+            "filename": "Godot.rar"
         }
     },
     "apollojustice": {
         "name": "Apollo Justice",
+        "folder": "AJ",
         "court": {
-            
+            "filename": "Backgrounds.zip"
         },
         "wesley": {
-
+            "filename": "Wesley-Stickler.zip"
         },
         "hobo": {
-
+            "filename": "Hobo-Phoenix.7z"
         },
         "wocky": {
-
+            "filename": "Wocky-Kitaki.zip"
         },
         "judge": {
-
+            "filename": "Judge.7z"
         },
         "payne": {
-
+            "filename": "Payne.rar"
         },
         "klavier": {
-
+            "filename": "Klavier-Gavin.7z"
         }
     },
     "investigations": {
         "name": "Investigations",
+        "folder": "AAI",
         "edgeworth": {
-            
+            "filename": "Miles-Edgeworth.7z"
         },
         "colas": {
-
+            "filename": "Colas-Palaeno.zip"
         },
         "kay": {
-
+            "filename": "Kay-Faraday.zip"
         },
         "lang": {
-
+            "filename": "Lang.7z"
         },
         "ema": {
-
+            "filename": "Ema-Skye.7z"
         }
     },
     "investigations2": {
         "name": "Investigations 2",
+        "folder": "AAI2",
         "backgrounds": {
-
+            "filename": "backgrounds.7z"
         },
         "justine": {
-
+            "filename": "Justine-Courtney.7z"
         },
         "nicole": {
-
+            "filename": "Nicole.zip"
         },
         "young": {
-
+            "filename": "Young-Dane-Gustava.zip"
         },
         "raymond": {
-
+            "filename": "Raymond.zip"
         },
         "sebastion": {
-            
+            "filename": "Sebastian-Debeste.zip"
         }
     },
     "plvaa": {
         "name": "PLvAA",
+        "folder": "PLvAA",
         "boistrum": {
-            
+            "filename": "Boistrum.7z"
         }
     },
     "dualdestinies": {
         "name": "Dual Destinies",
+        "folder": "DD",
         "bobby": {
-
+            "filename": "Bobby-Fulbright.7z"
         },
         "sasha": {
-
+            "filename": "Sasha-Buckler.7z"
         }
     },
     "soj": {
         "name": "SOJ",
+        "folder": "SOJ",
         "phoenix": {
-
+            "filename": "Phoenix.zip"
         },
         "judge": {
-
+            "filename": "Judge.zip"
         },
         "ema": {
-
+            "filename": "Ema.7z"
         }
     },
     "dgs1+2": {
         "name": "DGS 1+2",
+        "folder": "DGS2",
         "yuujin": {
-
+            "filename": "Yuujin-Mikotoba.rar"
         },
         "haori": {
-
+            "filename": "Haori.zip"
         }
     }
 }
