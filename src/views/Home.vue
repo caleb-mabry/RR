@@ -118,7 +118,10 @@ background: linear-gradient(90deg, rgba(18,24,31,1) 0%, rgba(50,67,85,1) 100%);
 
 @media only screen and (max-width: 918px) {
   .container {
-    background: url("../assets/RippingResource.jpg");
+  }
+  .right-middle {
+    text-align: center;
+    opacity: .8;
   }
   #image {
     display: none;
