@@ -5,7 +5,7 @@
         <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSfnuKxEGUK6SheuUp6jfDWi09swRiSBnRdSFN4KIw42jtg1DQ/viewform?usp=sf_link">Requests</a></li>
         <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSdaCs3t7ayFrfDKa-E0Af0TFH5YoHwNU90i2iJ9gm_00IjwmA/viewform?usp=sf_link">Report Issue</a></li>
         <li><a href="https://discord.com/invite/S8zyJ84">Discord</a></li>
-        <li><router-link to="/">Submit Your Rip</router-link></li>
+        <li><router-link to="/Submit">Submit Your Rip</router-link></li>
   </ul>
 </nav>
 </template>

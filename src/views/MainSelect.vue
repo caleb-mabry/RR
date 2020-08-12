@@ -14,18 +14,23 @@
     </div>
 
     <h1 id="selected-episode">{{selectedEpisode}}</h1>
-
+          <transition
+        name="fade"
+        mode="out-in"
+      >
     <div v-if="doesCharacterEpisodeExist" class="container">
       <a v-for="item in charactersInEpisode" :key="item.id" :href="s3BucketPath(item)" class="link">
-        <img :src="imageName(item)" class="character-image" />
+        <img :src="imageName(item)" class="character-image" />                    
       </a>
     </div>
+    </transition>
+    
+    </transition>
   </div>
 </template>
 
 <script>
 import Characters from "../assets/Characters.json";
-
 export default {
   data() {
     return {

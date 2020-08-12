@@ -20,6 +20,11 @@ Vue.use(VueRouter)
   name: 'Episode',
   component: () => import('../views/MainSelect.vue'),
 },
+{
+  path: '/Submit',
+  name: 'Submit',
+  component: () => import('../views/Submit.vue'),
+},
   {
     path: '/about',
     name: 'About',

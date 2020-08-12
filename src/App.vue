@@ -1,6 +1,11 @@
 <template>
   <div id="app">
+          <transition
+        name="fade"
+        mode="out-in"
+      >
     <router-view />
+          </transition>
   </div>
 </template>
 
@@ -22,5 +27,16 @@ background: radial-gradient(circle, rgba(87,123,173,1) 65%, rgba(53,57,86,1) 100
 }
 .navbar {
   background-color: #4c2b2b;
+}
+.fade-enter-active,
+.fade-leave-active {
+  transition-duration: 0.3s;
+  transition-property: opacity;
+  transition-timing-function: ease;
+}
+
+.fade-enter,
+.fade-leave-active {
+  opacity: 0
 }
 </style>
