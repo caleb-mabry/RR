@@ -24,6 +24,11 @@ html, body, #app {
     transition: 0.3s;
    background: rgb(87,123,173);
 background: radial-gradient(circle, rgba(87,123,173,1) 65%, rgba(53,57,86,1) 100%); 
+font-family: MyWebFont;
+}
+@font-face {
+  font-family: 'MyWebFont';
+  src: url('./assets/Suburga2.ttf'); /* IE9 Compat Modes */
 }
 .navbar {
   background-color: #4c2b2b;

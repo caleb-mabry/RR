@@ -2,7 +2,7 @@
   <div class="container">
     <main class="card">
       <div class="left">
-        <img id="image" :src="require('../assets/RippingResource.jpg')" alt />
+        <!-- <img id="image" :src="require('../assets/main.png')" /> -->
       </div>
       <div class="right">
         <div class="right-top">
@@ -12,13 +12,9 @@
           <h1 id="title">The Ripping Resource</h1>
         </div>
         <div class="right-bottom">
-          <p id="description">
-            The Ripping Resource is a website where you can access High Definiton rips of Ace Attorney models and sprites to upgrade characters for Attorney Online. Depending on what Server you're from, some of the GIFs will have to be renamed. The point of this website is that, if you were to just download every single character in HD, your filesize would explode, which is why you are intended to pick which characters you wish to upgrade.
-            <br />
-            <br />It is recommended that you get a fullscreen theme for Attorney Online. You can also submit your own HD rips to help us grow. We're not just a HD rips website, however. Our Discord is a ripping community, where you can learn, share, and ask questions, and generally just hang out!
-            <br />
-            <br />We are affiliated with Team Turnabout, go check them out!
-          </p>
+          <p>The Ripping Resource is a website where you can access high definition (HD) rips of Ace Attorney models and sprites to upgrade characters for Attorney Online, although these rips are just as good for making fan videos, and anything you could use them for! Depending on what server you're from, some of the assets will have to be renamed, since not all names work from server to server. The purpose of this website is that, if you were to just download every single character in HD, your filesize would explode, which is why you are intended to pick which characters you wish to upgrade. And if you want to upgrade all of them, provided you have the space, go for it!</p>
+          <p>We recommend that you get a fullscreen (or at least larger) theme for Attorney Online. You can also submit your own HD rips to help us grow. We're not just an HD rips site, however. Our Discord server is a ripping community, where you can learn, share, and ask questions, and generally just hang out!</p>
+          <p>We are affiliated with Team Turnabout, go check them out!</p>
         </div>
       </div>
     </main>
@@ -42,8 +38,13 @@ main {
   width: 65%;
   height: fit-content;
   border-radius: 5px;
-   background: rgb(110,122,195);
-background: linear-gradient(90deg, rgba(110,122,195,1) 0%, rgba(77,85,138,1) 48%, rgba(54,60,96,1) 100%); 
+  background: rgb(110, 122, 195);
+  background: linear-gradient(
+    90deg,
+    rgba(110, 122, 195, 1) 0%,
+    rgba(77, 85, 138, 1) 48%,
+    rgba(54, 60, 96, 1) 100%
+  );
 }
 .card {
   /* Add shadows to create the "card" effect */
@@ -64,6 +65,9 @@ background: linear-gradient(90deg, rgba(110,122,195,1) 0%, rgba(77,85,138,1) 48%
 }
 .left {
   width: 50%;
+  background: url('../assets/main.png');
+  background-size: cover;
+  background-position: center;
 }
 .right {
   display: flex;
@@ -83,7 +87,7 @@ background: linear-gradient(90deg, rgba(110,122,195,1) 0%, rgba(77,85,138,1) 48%
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
 }
-#description {
+p {
   font-size: 1.1vw;
 }
 .right-middle {
@@ -103,17 +107,22 @@ background: linear-gradient(90deg, rgba(110,122,195,1) 0%, rgba(77,85,138,1) 48%
   font-size: 2.6vw;
   flex-wrap: wrap;
 }
-.right-bottom, .right-middle {
+.right-bottom,
+.right-middle {
   align-items: center;
-  padding: 3%
+  padding: 3%;
 }
 .right-bottom {
   height: auto;
   color: white;
   height: 70%;
   position: relative;
-  background: rgb(18,24,31);
-background: linear-gradient(90deg, rgba(18,24,31,1) 0%, rgba(50,67,85,1) 100%); 
+  background: rgb(18, 24, 31);
+  background: linear-gradient(
+    90deg,
+    rgba(18, 24, 31, 1) 0%,
+    rgba(50, 67, 85, 1) 100%
+  );
 }
 
 @media only screen and (max-width: 918px) {
@@ -121,7 +130,7 @@ background: linear-gradient(90deg, rgba(18,24,31,1) 0%, rgba(50,67,85,1) 100%);
   }
   .right-middle {
     text-align: center;
-    opacity: .8;
+    opacity: 0.8;
   }
   #image {
     display: none;
