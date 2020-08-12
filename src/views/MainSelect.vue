@@ -142,23 +142,24 @@ a {
   height: auto;
 }
 .list-complete-item {
-  transition: all 1s;
-  display: inline-block;
-  margin-right: 10px;
+  transition: all 0.5s;
 }
 .list-complete-enter, .list-complete-leave-to
 /* .list-complete-leave-active below version 2.1.8 */ {
   opacity: 0;
-  transform: translateX(50px);
-    transition: all .2s;
-
+  transition: all 0.5s;
 }
 .list-complete-leave-active {
+  transition: all 0.5s;
+  width: 10px;
+  height: 10px;
   position: absolute;
 }
-.list-transition{
-    display: flex;
-    position: relative;
-    width: 100%;
+.list-transition {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 100%;
+  transition: all 0.2s;
 }
 </style>
