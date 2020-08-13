@@ -13,7 +13,7 @@
         <div class="right-bottom">
           <p>The Ripping Resource is a website where you can access high definition (HD) rips of Ace Attorney models and sprites to upgrade characters for Attorney Online, although these rips are just as good for making fan videos, and anything you could use them for! Depending on what server you're from, some of the assets will have to be renamed, since not all names work from server to server. The purpose of this website is that, if you were to just download every single character in HD, your filesize would explode, which is why you are intended to pick which characters you wish to upgrade. And if you want to upgrade all of them, provided you have the space, go for it!</p>
           <p>We recommend that you get a fullscreen (or at least larger) theme for Attorney Online. You can also submit your own HD rips to help us grow. We're not just an HD rips site, however. Our Discord server is a ripping community, where you can learn, share, and ask questions, and generally just hang out!</p>
-          <p>We are affiliated with <a href="https://discordapp.com/channels/695451438960214056/743315489425719296/743316309751627796" id="turnabout-link">Team Turnabout,</a> go check them out!</p>
+          <p>We are affiliated with <a href="https://www.youtube.com/teamturnabout" id="turnabout-link">Team Turnabout,</a> go check them out!</p>
         </div>
       </div>
     </main>
