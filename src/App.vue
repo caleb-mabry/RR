@@ -24,7 +24,7 @@ html, body, #app {
     transition: 0.3s;
    background: rgb(87,123,173);
 background: radial-gradient(circle, rgba(87,123,173,1) 65%, rgba(53,57,86,1) 100%); 
-font-family: MyWebFont;
+font-family: MyWebFont, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 @font-face {
   font-family: 'MyWebFont';
