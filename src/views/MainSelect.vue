@@ -9,7 +9,7 @@
         :to="{ name:'Episode', params: {characterEpisode: item}}"
         class="link-title"
       >
-        <img :src="require('../assets/'+item+'.png')" class="tile-image" />
+        <img :src="require('../assets/'+item+'.png')" class="tile-image" :alt="item"/>
       </router-link>
     </div>
 
@@ -23,7 +23,7 @@
             :href="s3BucketPath(item)"
             class="link"
           >
-            <img :src="imageName(item)" class="character-image" />
+            <img :src="imageName(item)" class="character-image" :alt="item"/>
           </a>
         </transition-group>
       </div>

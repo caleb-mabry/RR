@@ -2,7 +2,6 @@
   <div class="container">
     <main class="card">
       <div class="left">
-        <!-- <img id="image" :src="require('../assets/main.png')" /> -->
       </div>
       <div class="right">
         <div class="right-top">
