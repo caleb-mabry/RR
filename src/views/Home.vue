@@ -64,7 +64,7 @@ main {
 }
 .left {
   width: 50%;
-  background: url('../assets/main.png');
+  background: url('../assets/main.jpg');
   background-size: cover;
   background-position: center;
 }
