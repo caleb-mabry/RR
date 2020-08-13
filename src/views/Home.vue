@@ -125,11 +125,15 @@ p {
 }
 
 @media only screen and (max-width: 918px) {
-  .container {
+main {
+    width: 100%;
   }
   .right-middle {
     text-align: center;
     opacity: 0.8;
+  }
+  #title {
+    font-size: 5vw;
   }
   #image {
     display: none;
@@ -141,6 +145,9 @@ p {
     background-color: black;
     color: white;
     width: 100%;
+  }
+  p {
+    font-size: 2vw;
   }
 }
 </style>

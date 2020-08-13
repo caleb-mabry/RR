@@ -47,4 +47,9 @@ ul {
 li {
   margin: 2%;
 }
+@media only screen and (max-width: 918px) {
+a {
+  font-size: 3vw;
+}
+}
 </style>
