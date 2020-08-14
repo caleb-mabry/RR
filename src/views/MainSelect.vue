@@ -108,7 +108,7 @@ export default {
   display: flex;
   flex-wrap: wrap;
   width: 75%;
-  padding: 5%;
+  padding: 1%;
   background: linear-gradient(
     90deg,
     rgba(18, 24, 31, 1) 0%,
@@ -125,7 +125,7 @@ a {
 }
 
 .link-title {
-  width: 10%;
+  max-width: 15%;
   margin: 5px;
 }
 .link-title:hover {
@@ -174,5 +174,15 @@ a {
   justify-content: space-around;
   width: 100%;
   transition: all 0.2s;
+}
+@media only screen and (max-width: 1339px) {
+  .link-title {
+    max-width: 25%;
+    margin: 5px;
+  }
+  .link {
+    width: 25%;
+    margin: 5px;
+  }
 }
 </style>

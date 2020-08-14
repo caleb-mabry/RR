@@ -78,6 +78,7 @@ export default {
   flex-wrap: wrap;
   width: 60%;
   padding: 2%;
+  border-radius: 5px;
   background: linear-gradient(
     90deg,
     rgba(18, 24, 31, 1) 0%,
@@ -102,7 +103,7 @@ export default {
 }
 #description {
   padding: 5%;
-  font-size: 1.2vw;
+  font-size: 16px;
   color: whitesmoke;
 }
 #character-image {
@@ -110,12 +111,12 @@ export default {
   height: auto;
 }
 h1 {
-  font-size: 2vw;
+  font-size: 40px;
 }
 .button {
   padding: 2%;
   width: 30%;
-  font-size: 2vh;
+  font-size: 16px;
 }
 .fileinfo {
   text-align: center;
@@ -128,7 +129,7 @@ h1 {
   width: 100%;
   color: whitesmoke;
   display: inline-block;
-  font-size: 100%;
+  font-size: 17px;
   border-bottom: 1px dotted whitesmoke; /* If you want dots under the hoverable text */
 }
 
@@ -154,5 +155,48 @@ h1 {
 .tooltip:hover .tooltiptext {
   opacity: 1;
   transition: all 0.2s;
+}
+@media only screen and (max-width: 1339px) {
+  .outer-container {
+    margin: 5%;
+  }
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    background: linear-gradient(
+      90deg,
+      rgba(18, 24, 31, 1) 0%,
+      rgba(50, 67, 85, 1) 100%
+    );
+    justify-content: space-around;
+    margin: auto;
+  }
+  .left {
+    width: 80%;
+  }
+  .right {
+    text-align: center;
+  }
+  #character-image {
+    display: none;
+  }
+  .tooltip {
+    display: none;
+  }
+  .tooltip .tooltiptext {
+    display: none;
+  }
+  .download-options {
+    padding: 0px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .button {
+    padding: 2%;
+    margin: 2%;
+    width: 60%;
+    font-size: 16px;
+  }
 }
 </style>
