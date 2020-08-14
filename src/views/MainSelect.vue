@@ -17,15 +17,14 @@
     <transition name="fade" mode="out-in">
       <div v-if="doesCharacterEpisodeExist" class="container">
         <transition-group name="list-complete" class="list-transition">
-          <router-link
-            v-for="item in charactersInEpisode"
-            :to="item"
-            :key="item"
-            class="link"
-            append
-          >
-            <img :src="imageName(item)" class="character-image" :alt="item" />
-          </router-link>
+          <template v-for="item in charactersInEpisode">
+            <router-link :to="item" :key="item" class="link" append v-if="advanceExist(item)">
+              <img :src="imageName(item)" class="character-image" :alt="item" />
+            </router-link>
+            <a :href="s3BucketPath(item)" :key="item" class="link" v-else>
+              <img :src="imageName(item)" class="character-image" :alt="item" />
+            </a>
+          </template>
         </transition-group>
       </div>
     </transition>
@@ -42,12 +41,25 @@ export default {
     };
   },
   methods: {
+    advanceExist(item) {
+      console.log(item);
+      if (
+        Object.keys(
+          Characters[this.$route.params.characterEpisode][item]
+        ).includes("ripped")
+      ) {
+        return true;
+      } else {
+        return false;
+      }
+    },
     s3BucketPath: function (item) {
       let folder = Characters[this.$route.params.characterEpisode].folder;
       let filename =
         Characters[this.$route.params.characterEpisode][item].filename;
       return `${this.fileUrl}/${folder}/${filename}`;
     },
+
     imageName(name) {
       try {
         return require("../assets/" + name + ".jpg");
@@ -81,6 +93,7 @@ export default {
           Characters[this.$route.params.characterEpisode]
         );
         let removeName = allKeys.splice(0, 2);
+        console.log(allKeys);
         return allKeys;
       } else {
         return [];

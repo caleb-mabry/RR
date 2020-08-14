@@ -12,7 +12,12 @@
         <div class="right">
           <p id="description">{{description}}</p>
           <div class="download-options">
-            <a href class="button" v-for="type in filetypes" :key="type">{{type}}</a>
+            <a
+              :href="s3BucketPath(character, type)"
+              class="button"
+              v-for="type in filetypes"
+              :key="type"
+            >{{type}}</a>
           </div>
         </div>
       </div>
@@ -26,9 +31,18 @@ import Characters from "../assets/Characters.json";
 export default {
   data() {
     return {
+      fileUrl: "https://ripping-resource.s3.amazonaws.com",
       characterEpisode: this.$route.params.characterEpisode,
       character: this.$route.params.character,
     };
+  },
+  methods: {
+    s3BucketPath: function (item, type) {
+      let folder = Characters[this.$route.params.characterEpisode].folder;
+      let filename =
+        Characters[this.$route.params.characterEpisode][item].filename;
+      return `${this.fileUrl}/${folder}/${type}_${filename}`;
+    },
   },
   computed: {
     description() {
