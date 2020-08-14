@@ -17,14 +17,15 @@
     <transition name="fade" mode="out-in">
       <div v-if="doesCharacterEpisodeExist" class="container">
         <transition-group name="list-complete" class="list-transition">
-          <a
+          <router-link
             v-for="item in charactersInEpisode"
+            :to="item"
             :key="item"
-            :href="s3BucketPath(item)"
             class="link"
+            append
           >
             <img :src="imageName(item)" class="character-image" :alt="item" />
-          </a>
+          </router-link>
         </transition-group>
       </div>
     </transition>

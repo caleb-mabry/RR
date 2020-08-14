@@ -91,7 +91,44 @@
         "name": "PLvAA",
         "folder": "PLvAA",
         "boistrum": {
-            "filename": "Boistrum.7z"
+            "ripped": "ThePaperMask",
+            "appear": "PLvsPW-4",
+            "description": "Boistrum is the loud and aggressive captain of the Vigilantes, who are guards charged with keeping watch over Labyrinthia's Bell Tower. ",
+            "filename": "Boistrum.7z",
+            "filetypes": [
+                "WEBP",
+                "GIF"
+            ]
+        },
+        "foxy": {
+            "ripped": "ThePaperMask",
+            "appear": "PLvsPW-4",
+            "description": "Foxy is one of the guards who keep watch over Labyrinthia's Bell Tower who are known as the Vigilantes. The only female member of the Vigilantes, Foxy is overly sensual and enjoys degrading men; in particular her fellow Vigilantes Servius and Treddon, who are completely enamoured with her. ",
+            "filename": "Foxy.7z",
+            "filetypes": [
+                "WEBP",
+                "GIF"
+            ]
+        },
+        "ridelle": {
+            "ripped": "Ellie",
+            "appear": "PLvsPW",
+            "description": "Ridelle Mystere is the librarian of Labyrinthia's Great Archive. Her love of puzzles leads her to collect any that Hershel Layton and Phoenix Wright may have missed or been unable to solve during their time in the town, allowing them to solve them at a later time. ",
+            "filename": "Foxy.7z",
+            "filetypes": [
+                "WEBP",
+                "GIF"
+            ]
+        },
+        "shakey": {
+            "ripped": "Daryll",
+            "appear": "PLvsPW-4",
+            "description": "Shakey is one of the guards who keep watch over Labyrinthia's Bell Tower known as the Vigilantes. He is constantly shaking and covered in bandages from frequently falling over. ",
+            "filename": "Foxy.7z",
+            "filetypes": [
+                "WEBP",
+                "GIF"
+            ]
         }
     },
     "dualdestinies": {

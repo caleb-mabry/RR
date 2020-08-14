@@ -4,27 +4,32 @@ import Home from '../views/Home.vue'
 import MainSelect from '../views/MainSelect.vue'
 Vue.use(VueRouter)
 
-  const routes = [
+const routes = [
   {
     path: '/',
     name: 'Home',
     component: Home
   },
-{
-  path: '/Characters',
-  name: 'Characters',
-  component: () => import('../views/MainSelect.vue'),
-},
-{
-  path: '/Characters/:characterEpisode',
-  name: 'Episode',
-  component: () => import('../views/MainSelect.vue'),
-},
-{
-  path: '/Submit',
-  name: 'Submit',
-  component: () => import('../views/Submit.vue'),
-},
+  {
+    path: '/Characters',
+    name: 'Characters',
+    component: () => import('../views/MainSelect.vue'),
+  },
+  {
+    path: '/Characters/:characterEpisode',
+    name: 'Episode',
+    component: () => import('../views/MainSelect.vue'),
+  },
+  {
+    path: '/Characters/:characterEpisode/:character',
+    name: 'Character',
+    component: () => import('../views/Character.vue')
+  },
+  {
+    path: '/Submit',
+    name: 'Submit',
+    component: () => import('../views/Submit.vue'),
+  },
   {
     path: '/about',
     name: 'About',
