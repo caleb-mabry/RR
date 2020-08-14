@@ -19,6 +19,12 @@
               :key="type"
             >{{type}}</a>
           </div>
+          <div class="tooltip">
+            What's the difference?
+            <span
+              class="tooltiptext"
+            >TNC and VLS use a format called WEBP. It allows for higher quality, and can be smaller than the GIF format. Our WEBPs are in 5:3, the aspect ratio of the 3DS, at 1200x720. GIF is what the rest of the AO community uses, is lower quality, as it can only allow for 256 colors, and are usually three times larger. Our GIFs are higher resolution than our WEBPs (1024x768). AO2 supports WEBP, however most characters are not in WEBP as of now. Unless you're getting these for an AO2 server, WEBP is recommended.</span>
+          </div>
         </div>
       </div>
     </div>
@@ -110,5 +116,43 @@ h1 {
   padding: 2%;
   width: 30%;
   font-size: 2vh;
+}
+.fileinfo {
+  text-align: center;
+}
+/* Tooltip container */
+.tooltip {
+  margin: 2%;
+  position: relative;
+  text-align: center;
+  width: 100%;
+  color: whitesmoke;
+  display: inline-block;
+  font-size: 100%;
+  border-bottom: 1px dotted whitesmoke; /* If you want dots under the hoverable text */
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  opacity: 0;
+  width: 100%;
+  background-color: #24303d;
+  color: #fff;
+  text-align: center;
+  padding: 5px;
+  border-radius: 6px;
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  transform: translateY(10%);
+  left: 0px;
+  top: 0;
+  transition: all 0.2s;
+  z-index: 1;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  opacity: 1;
+  transition: all 0.2s;
 }
 </style>
