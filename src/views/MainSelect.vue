@@ -9,7 +9,7 @@
         :to="{ name:'Episode', params: {characterEpisode: item}}"
         class="link-title"
       >
-        <img :src="require('../assets/'+item+'.png')" class="tile-image" :alt="item"/>
+        <img :src="imageName(item)" class="tile-image" :alt="item" />
       </router-link>
     </div>
 
@@ -23,7 +23,7 @@
             :href="s3BucketPath(item)"
             class="link"
           >
-            <img :src="imageName(item)" class="character-image" :alt="item"/>
+            <img :src="imageName(item)" class="character-image" :alt="item" />
           </a>
         </transition-group>
       </div>
@@ -49,15 +49,14 @@ export default {
     },
     imageName(name) {
       try {
-        return require("../assets/" + name + ".png");
-      } catch {
         return require("../assets/" + name + ".jpg");
+      } catch {
+        return require("../assets/" + name + ".png");
       }
     },
   },
   computed: {
     selectedEpisode() {
-      console.log(this.selectedCharacterPath);
       if (this.$route.params.characterEpisode) {
         return Characters[this.$route.params.characterEpisode].name;
       } else {
