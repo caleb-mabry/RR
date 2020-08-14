@@ -49,7 +49,11 @@ li {
 }
 @media only screen and (max-width: 918px) {
 a {
-  font-size: 3vw;
+  font-size: 2vh;
+}
+a:hover {
+  font-size:2.1vh;
+  background-color: #567aab;
 }
 }
 </style>
