@@ -140,7 +140,11 @@ main {
   }
   .right-middle {
     text-align: center;
+    height: fit-content;
     opacity: 0.8;
+  }
+  .right-bottom {
+    height: fit-content;
   }
   #title {
     font-size: 5vw;
@@ -152,12 +156,12 @@ main {
     display: none;
   }
   .right {
-    background-color: black;
+    background-color: #1c252f;
     color: white;
     width: 100%;
   }
   p {
-    font-size: 2vw;
+    font-size: 1.2vh;
   }
 }
 </style>
