@@ -161,7 +161,7 @@ main {
     width: 100%;
   }
   p {
-    font-size: 1.2vh;
+    font-size: 2vh;
   }
 }
 </style>
