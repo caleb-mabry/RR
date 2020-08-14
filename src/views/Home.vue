@@ -1,8 +1,7 @@
 <template>
   <div class="container">
     <main class="card">
-      <div class="left">
-      </div>
+      <div class="left"></div>
       <div class="right">
         <div class="right-top">
           <NavBar />
@@ -13,7 +12,13 @@
         <div class="right-bottom">
           <p>The Ripping Resource is a website where you can access high definition (HD) rips of Ace Attorney models and sprites to upgrade characters for Attorney Online, although these rips are just as good for making fan videos, and anything you could use them for! Depending on what server you're from, some of the assets will have to be renamed, since not all names work from server to server. The purpose of this website is that, if you were to just download every single character in HD, your filesize would explode, which is why you are intended to pick which characters you wish to upgrade. And if you want to upgrade all of them, provided you have the space, go for it!</p>
           <p>We recommend that you get a fullscreen (or at least larger) theme for Attorney Online. You can also submit your own HD rips to help us grow. We're not just an HD rips site, however. Our Discord server is a ripping community, where you can learn, share, and ask questions, and generally just hang out!</p>
-          <p>We are affiliated with <a href="https://www.youtube.com/teamturnabout" id="turnabout-link">Team Turnabout,</a> go check them out!</p>
+          <p>
+            We are affiliated with
+            <a
+              href="https://www.youtube.com/teamturnabout"
+              id="turnabout-link"
+            >Team Turnabout,</a> go check them out!
+          </p>
         </div>
       </div>
     </main>
@@ -37,6 +42,7 @@ main {
   width: 65%;
   height: fit-content;
   border-radius: 5px;
+  margin-top: 5%;
   background: rgb(110, 122, 195);
   background: linear-gradient(
     90deg,
@@ -64,7 +70,7 @@ main {
 }
 .left {
   width: 50%;
-  background: url('../assets/main.jpg');
+  background: url("../assets/main.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -87,7 +93,7 @@ main {
   border-bottom-left-radius: 5px;
 }
 p {
-  font-size: 1.1vw;
+  font-size: 16px;
 }
 .right-middle {
   margin: 0px;
@@ -134,8 +140,8 @@ p {
   opacity: 0.8;
 }
 
-@media only screen and (max-width: 918px) {
-main {
+@media only screen and (max-width: 1339px) {
+  main {
     width: 100%;
   }
   .right-middle {
@@ -147,7 +153,7 @@ main {
     height: fit-content;
   }
   #title {
-    font-size: 5vw;
+    font-size: 40px;
   }
   #image {
     display: none;
@@ -161,7 +167,7 @@ main {
     width: 100%;
   }
   p {
-    font-size: 2vh;
+    font-size: 18px;
   }
 }
 </style>
