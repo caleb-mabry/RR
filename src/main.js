@@ -2,8 +2,8 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import VueAnalytics from 'vue-analytics'
-import './registerServiceWorker'
 
+import './registerServiceWorker'
 
 Vue.use(VueAnalytics, {
   id: "UA-158287109-4",
