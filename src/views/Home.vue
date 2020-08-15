@@ -92,9 +92,16 @@ p {
 }
 .right-middle {
   margin: 0px;
-  padding: 0px;
+  padding: 3%;
   position: relative;
-  height: 15%;
+    background: rgb(110, 122, 195);
+  background: linear-gradient(
+    90deg,
+    rgba(110, 122, 195, 1) 0%,
+    rgba(77, 85, 138, 1) 48%,
+    rgba(54, 60, 96, 1) 100%
+  );
+  width: 100%;
   flex-wrap: wrap;
 }
 #title {
