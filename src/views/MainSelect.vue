@@ -42,7 +42,6 @@ export default {
   },
   methods: {
     advanceExist(item) {
-      console.log(item);
       if (
         Object.keys(
           Characters[this.$route.params.characterEpisode][item]
@@ -93,7 +92,6 @@ export default {
           Characters[this.$route.params.characterEpisode]
         );
         let removeName = allKeys.splice(0, 2);
-        console.log(allKeys);
         return allKeys;
       } else {
         return [];
