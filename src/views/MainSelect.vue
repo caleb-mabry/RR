@@ -62,7 +62,7 @@ export default {
 
     imageName(name) {
       try {
-        return require("../assets/" + name + ".jpg");
+        return require("../assets/" + name + ".webp");
       } catch {
         return require("../assets/" + name + ".png");
       }

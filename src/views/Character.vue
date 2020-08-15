@@ -61,7 +61,7 @@ export default {
       return Characters[this.characterEpisode][this.character].appear;
     },
     fullbody() {
-      return require("../assets/" + this.character + "-fullbody.png");
+      return require("../assets/" + this.character + "-fullbody.webp");
     },
     filetypes() {
       return Characters[this.characterEpisode][this.character].filetypes;

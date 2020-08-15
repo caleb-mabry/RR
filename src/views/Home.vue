@@ -2,7 +2,7 @@
   <div class="container">
     <main class="card">
       <div class="left">
-        <img :src="require('../assets/main.jpg')" id="image" alt="" srcset="">
+        <img :src="require('../assets/main.webp')" id="image" alt="" srcset="">
       </div>
       <div class="right">
         <div class="right-top">
