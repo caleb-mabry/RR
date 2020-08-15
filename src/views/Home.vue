@@ -101,7 +101,7 @@ p {
     rgba(77, 85, 138, 1) 48%,
     rgba(54, 60, 96, 1) 100%
   );
-  width: 100%;
+  width: auto;
   flex-wrap: wrap;
 }
 #title {
