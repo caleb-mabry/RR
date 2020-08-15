@@ -16,7 +16,10 @@ module.exports = {
     configureWebpack: {
       plugins: [
         new HtmlWebpackPlugin(),
-        new PreloadWebpackPlugin()
+        new PreloadWebpackPlugin({
+          rel: 'preload',
+          include: 'all' // or 'initial'
+        })
       ]
     }
   
