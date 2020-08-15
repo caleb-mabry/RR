@@ -125,7 +125,7 @@ a {
 }
 
 .link-title {
-  max-width: 15%;
+  max-width: 11%;
   margin: 5px;
 }
 .link-title:hover {

@@ -18,6 +18,7 @@
     "@vue/cli-plugin-pwa": "^4.5.3",
     "@vue/cli-service": "^4.4.0",
     "compression-webpack-plugin": "^4.0.1",
+    "preload-webpack-plugin": "^2.3.0",
     "vue-template-compiler": "^2.6.11",
     "webpack-bundle-analyzer": "^3.8.0"
   }

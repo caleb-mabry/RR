@@ -1,4 +1,5 @@
-// const CompressionPlugin = require('compression-webpack-plugin');
+const CompressionPlugin = require('compression-webpack-plugin');
+const PreloadWebpackPlugin = require('preload-webpack-plugin');
 module.exports = {
   pwa: {
     name: 'ripping-resource',
@@ -34,6 +35,11 @@ module.exports = {
         options[0].fileBlacklist.push(/myasyncRoute(.)+?\.css$/)
         return options
       })
+    },
+    configureWebpack: {
+      plugins: [
+        new PreloadWebpackPlugin()
+      ]
     }
   
   

@@ -1,7 +1,9 @@
 <template>
   <div class="container">
     <main class="card">
-      <div class="left"></div>
+      <div class="left">
+        <img :src="require('../assets/main.jpg')" id="image" alt="" srcset="">
+      </div>
       <div class="right">
         <div class="right-top">
           <NavBar />
@@ -39,10 +41,8 @@ export default {
 <style scoped>
 main {
   display: flex;
-  width: 65%;
-  height: fit-content;
+  width: 75%;
   border-radius: 5px;
-  margin-top: 5%;
   background: rgb(110, 122, 195);
   background: linear-gradient(
     90deg,
@@ -65,19 +65,17 @@ main {
 .container {
   display: flex;
   width: 100%;
+  height: 100%;
   justify-content: center;
   align-items: center;
 }
 .left {
-  width: 50%;
-  background: url("../assets/main.jpg");
-  background-size: cover;
-  background-position: center;
+
 }
 .right {
   display: flex;
   flex-direction: column;
-  width: 50%;
+  width: 100%;
   position: relative;
 }
 .text {
@@ -87,10 +85,7 @@ main {
   height: fit-content;
 }
 #image {
-  width: 100%;
-  height: auto;
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
+  height: 100%;
 }
 p {
   font-size: 16px;
@@ -143,6 +138,7 @@ p {
 @media only screen and (max-width: 1339px) {
   main {
     width: 100%;
+    height: fit-content;
   }
   .right-middle {
     text-align: center;
