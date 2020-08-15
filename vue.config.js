@@ -1,3 +1,4 @@
+const CompressionPlugin = require('compression-webpack-plugin');
 module.exports = {
   pwa: {
     name: 'ripping-resource',
@@ -8,6 +9,12 @@ module.exports = {
     workboxOptions: {
       skipWaiting: true,
       clientsClaim: true,
+    },
+    chainWebpack(config) {
+      config.plugins.delete('prefetch');
+      
+      // and this line 
+      config.plugin('CompressionPlugin').use(CompressionPlugin);
     }
   }
 }
