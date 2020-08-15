@@ -41,7 +41,8 @@ export default {
 <style scoped>
 main {
   display: flex;
-  width: 75%;
+  width: 80%;
+  height: fit-content;
   border-radius: 5px;
   background: rgb(110, 122, 195);
   background: linear-gradient(
@@ -67,15 +68,16 @@ main {
   width: 100%;
   height: 100%;
   justify-content: center;
-  align-items: center;
+  overflow: scroll;
+
 }
 .left {
-
+  width: 50%;
 }
 .right {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 50%;
   position: relative;
 }
 .text {
@@ -85,7 +87,8 @@ main {
   height: fit-content;
 }
 #image {
-  height: 100%;
+  height: auto;
+  width: 100%;
 }
 p {
   font-size: 16px;
@@ -122,7 +125,7 @@ p {
 .right-bottom {
   height: auto;
   color: white;
-  height: 70%;
+  height: 100%;
   position: relative;
   background: rgb(18, 24, 31);
   background: linear-gradient(

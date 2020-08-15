@@ -26,6 +26,9 @@ html, body, #app {
 background: radial-gradient(circle, rgba(87,123,173,1) 65%, rgba(53,57,86,1) 100%); 
 font-family: MyWebFont, "Helvetica", "Arial";
 }
+#app {
+  height: 100%;
+}
 @font-face {
   font-display: swap;
   font-family: 'MyWebFont';
