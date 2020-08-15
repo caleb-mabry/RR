@@ -24,9 +24,10 @@ html, body, #app {
     transition: 0.3s;
    background: rgb(87,123,173);
 background: radial-gradient(circle, rgba(87,123,173,1) 65%, rgba(53,57,86,1) 100%); 
-font-family: MyWebFont, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+font-family: MyWebFont, "Helvetica", "Arial";
 }
 @font-face {
+  font-display: swap;
   font-family: 'MyWebFont';
   src: url('./assets/Suburga2.ttf'); /* IE9 Compat Modes */
 }
