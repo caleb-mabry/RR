@@ -2,25 +2,20 @@
 <div>
 <router-link to="/">Back</router-link>
   <div class="container">
-    <p>So you wish to submit your rip for this website. First off, thank you for considering to support us! We're still somewhat struggling to get active rippers and we appreciate the help. Also, submitting rips will get you a "Ripper" role on our Discord that will get you access to exclusive ripper channels.template</p>
-    <p>These rules are a MUST for submitting 2D rips here:</p>
-    <ol>
-      <li>AAI1HD, AAI2HD, AJHD Rips have to be 1024x768.</li>
-      <li>Trilogy HD rips have to be 1720x1290.</li>
-    </ol>
+    <p>This rule is a MUST for submitting rips here:</p>
+    <p>PC Trilogy, AAI1HD, AAI2HD, AJHD and 3D Rips have to be 1024x768 as GIF, 1200x720 as WEBP. </p>
+    <p>Alternatively You can submit your MAX files/PSDs so that they can be rendered at these resolutions and formats if you cannot do so yourself.</p>
 
-    <p>These rules are a MUST for submitting 3D rips here:</p>
-    <ul>
-      <li>MUST submit: 1365x768 (min. res) PNG frames -> (alternative, only if your PC cannot render at that res or you cannot upload all the frames because of filesize) MAX files</li>
-      <li>CAN submit: 1024x768 (exact res) GIFs</li>
-      <li>CAN submit: 1200x720 (exact res) WEBPs</li>
-    </ul>
-    <p>The following rules are a "guideline" to making rips for this site, while they're optional, that's how we do it, and that's how to avoid a lot of problems down the line:</p>
+    <p>The following rules are a "guideline" to making rips for this site and, while they're optional, they're how we do things here, and following them can avoid a lot of problems down the line: </p>
     <ol>
-      <li>When ripping in 2D, make a .psd file for each animation.</li>
-      <li>When ripping AAI1HD, AAI2HD or AJHD, rip in 1365x768, and then resize to 1024x768 before exporting. Keep the .PSD in 1365x768.</li>
-      <li>When ripping Steam Trilogy HD, rip in 2293x1290, and then resize to 1720x1290 before exporting. Keep the .PSD in 2293x1290.</li>
+      <li>When ripping, make a .PSD or .MAX file for each animation.</li>
+      <li>Run all spritesheets of 2D characters through Waifu2x - keep them in the same resolution, but apply Medium noise reduction. This is extra optional, as sometimes this can produce an adverse effect. </li>
+      <li>When ripping Trilogy PC, AAI1HD, AAI2HD or AJHD, rip in base resolution (seen below), and then resize to 1024x768 before exporting. Keep the .PSD in the base resolution (1365x768 for AAI1HD, AAI2HD, AJHD, and 2293x1290 for PC Trilogy).</li>
+      <li>When ripping in 3D, render individual frames out in 1920x1080 or 1365x768. GIFs should be downscaled to 1024x768 (4:3) and WEBPs should be downscaled to 1200x720 (5:3). Alternatively, you just submit the frames and let us handle it.</li>
+      <li>For 3D rips, upscale all textures 2x using Waifu2x. If you do not do this, we may not accept your rip. If you decide not to, please provide the .MAX files so that we can add them ourselves.</li>
+      <li>If possible, include .MAX and .PSD files for 2D rips in your submission. 8. When making 1024x768 GIFs for us, please use the ImageMagick script (made by CaptainSwag101) as it produces much cleaner results than Photoshop. For WEBP, use the ffmpeg script.</li>
     </ol>
+    <p>The reason we request for you to keep the .MAX and .PSDs for your rips is because TNC and VLS use a different aspect ratio and image format, and if you don't have certain software and plugins, you cannot make the needed files. That, and if any errors are caught, we can fix them quickly if you're unavailable.</p>
     <a href="https://docs.google.com/forms/d/e/1FAIpQLSdrB8r_qtHRB1PgqbKVzoRPpKU2o6GE85zN8pH0rV3r6vhroQ/viewform?usp=sf_link">Submit</a>
   </div>
 </div>

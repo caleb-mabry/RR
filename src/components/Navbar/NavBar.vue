@@ -18,6 +18,9 @@
         <a href="https://discord.com/invite/S8zyJ84">Discord</a>
       </li>
       <li>
+        <a href="https://forms.gle/78DSWT9M4oCzHwFQA">Staff Application</a>
+      </li>
+      <li>
         <router-link to="/Submit">Submit Your Rip</router-link>
       </li>
     </ul>
