@@ -1,5 +1,5 @@
-pipeline {
-    agent none
+node {
+    agent { dockerfile true }
     stages {
         stage('Checkout') {
             steps {
@@ -7,7 +7,7 @@ pipeline {
             }
         }
         stage('Build') {
-            agent { dockerfile true }
+
             steps {
                 sh 'node --version'
             }
