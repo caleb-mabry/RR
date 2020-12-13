@@ -6,23 +6,39 @@
       <router-link
         v-for="item in allCharacters"
         :key="item.id"
-        :to="{ name:'Episode', params: {characterEpisode: item}}"
+        :to="{ name: 'Episode', params: { characterEpisode: item } }"
         class="link-title"
       >
         <img :src="imageName(item)" class="tile-image" :alt="item" />
       </router-link>
     </div>
 
-    <h1 id="selected-episode">{{selectedEpisode}}</h1>
+    <h1 id="selected-episode">{{ selectedEpisode }}</h1>
     <transition name="fade" mode="out-in">
       <div v-if="doesCharacterEpisodeExist" class="container">
         <transition-group name="list-complete" class="list-transition">
           <template v-for="item in charactersInEpisode">
-            <router-link :to="item" :key="item" class="link" append v-if="advanceExist(item)">
-              <img :src="imageName(item)" class="character-image" :alt="item" />
+            <router-link
+              :to="item"
+              :key="item"
+              class="link"
+              append
+              v-if="advanceExist(item)"
+            >
+              <img
+                :src="imageName(item)"
+                class="character-image"
+                :alt="item"
+                @error="imageLoadError"
+              />
             </router-link>
             <a :href="s3BucketPath(item)" :key="item" class="link" v-else>
-              <img :src="imageName(item)" class="character-image" :alt="item" />
+              <img
+                :src="imageName(item)"
+                class="character-image"
+                :alt="item"
+                @error="imageLoadError"
+              />
             </a>
           </template>
         </transition-group>
@@ -52,18 +68,21 @@ export default {
         return false;
       }
     },
+    imageLoadError() {
+      console.log("Error loading image");
+    },
     s3BucketPath: function (item) {
       let folder = Characters[this.$route.params.characterEpisode].folder;
       let filename =
         Characters[this.$route.params.characterEpisode][item].filename;
       return `${this.fileUrl}/${folder}/${filename}`;
     },
-
+    imageExist(name) {},
     imageName(name) {
       try {
         return require("../assets/" + name + ".webp");
       } catch {
-        return require("../assets/" + name + ".png");
+        return "";
       }
     },
   },

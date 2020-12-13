@@ -1,29 +1,39 @@
 <template>
   <div>
-    <router-link :to="'/Characters/'+$route.params.characterEpisode">Back</router-link>
+    <router-link :to="'/Characters/' + $route.params.characterEpisode"
+      >Back</router-link
+    >
 
     <div class="outer-container">
       <div class="container">
         <div class="left">
-          <h1 id="character-name">{{character}}</h1>
+          <h1 id="character-name">{{ character }}</h1>
           <img :src="fullbody" alt id="character-image" />
-          <h1 id="ripper-name">Ripped By: {{ripped}}</h1>
+          <h1 id="ripper-name">Ripped By: {{ ripped }}</h1>
         </div>
         <div class="right">
-          <p id="description">{{description}}</p>
+          <p id="description">{{ description }}</p>
           <div class="download-options">
             <a
               :href="s3BucketPath(character, type)"
               class="button"
               v-for="type in filetypes"
               :key="type"
-            >{{type}}</a>
+              >{{ type }}</a
+            >
           </div>
           <div class="tooltip">
             What's the difference?
-            <span
-              class="tooltiptext"
-            >TNC and VLS use a format called WEBP. It allows for higher quality, and can be smaller than the GIF format. Our WEBPs are in 5:3, the aspect ratio of the 3DS, at 1200x720. GIF is what the rest of the AO community uses, is lower quality, as it can only allow for 256 colors, and are usually three times larger. Our GIFs are higher resolution than our WEBPs (1024x768). AO2 supports WEBP, however most characters are not in WEBP as of now. Unless you're getting these for an AO2 server, WEBP is recommended.</span>
+            <span class="tooltiptext"
+              >TNC and VLS use a format called WEBP. It allows for higher
+              quality, and can be smaller than the GIF format. Our WEBPs are in
+              5:3, the aspect ratio of the 3DS, at 1200x720. GIF is what the
+              rest of the AO community uses, is lower quality, as it can only
+              allow for 256 colors, and are usually three times larger. Our GIFs
+              are higher resolution than our WEBPs (1024x768). AO2 supports
+              WEBP, however most characters are not in WEBP as of now. Unless
+              you're getting these for an AO2 server, WEBP is recommended.</span
+            >
           </div>
         </div>
       </div>
@@ -61,7 +71,11 @@ export default {
       return Characters[this.characterEpisode][this.character].appear;
     },
     fullbody() {
-      return require("../assets/" + this.character + "-fullbody.webp");
+      try {
+        return require("../assets/" + this.character + "-fullbody.webp");
+      } catch {
+        return "";
+      }
     },
     filetypes() {
       return Characters[this.characterEpisode][this.character].filetypes;

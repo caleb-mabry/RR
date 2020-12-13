@@ -145,13 +145,64 @@
         "name": "SOJ",
         "folder": "SOJ",
         "phoenix": {
-            "filename": "Phoenix.zip"
+            "ripped": "ThePaperMask",
+            "appear": "PLvsPW-4",
+            "description": "Phoenix",
+            "filename": "Phoenix.7z",
+            "filetypes": [
+                "WEBP",
+                "GIF"
+            ]
+        },
+        "behleeb": {
+            "ripped": "ThePaperMask",
+            "appear": "PLvsPW-4",
+            "description": "Beh'leeb",
+            "filename": "Beh'leeb.7z",
+            "filetypes": [
+                "WEBP",
+                "GIF"
+            ]
+        },
+        "blackquill": {
+            "ripped": "ThePaperMask",
+            "appear": "PLvsPW-4",
+            "description": "Blackquill",
+            "filename": "Blackquill.7z",
+            "filetypes": [
+                "WEBP",
+                "GIF"
+            ]
+        },
+        "apollo": {
+            "ripped": "ThePaperMask",
+            "appear": "PLvsPW-4",
+            "description": "Apollo",
+            "filename": "Apollo.7z",
+            "filetypes": [
+                "WEBP",
+                "GIF"
+            ]
         },
         "judge": {
-            "filename": "Judge.zip"
+            "ripped": "ThePaperMask",
+            "appear": "PLvsPW-4",
+            "description": "Judge",
+            "filename": "Judge.7z",
+            "filetypes": [
+                "WEBP",
+                "GIF"
+            ]
         },
         "ema": {
-            "filename": "Ema.7z"
+            "ripped": "ThePaperMask",
+            "appear": "PLvsPW-4",
+            "description": "Ema",
+            "filename": "Ema.7z",
+            "filetypes": [
+                "WEBP",
+                "GIF"
+            ]
         }
     },
     "dgs1+2": {
