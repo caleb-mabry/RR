@@ -49,7 +49,7 @@ a {
   font-size: 1.2vw;
 }
 a:hover {
-  font-size: 1.3vw;
+  padding: 8px 16px;
   background-color: #567aab;
 }
 ul {
