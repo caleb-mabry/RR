@@ -135,7 +135,14 @@
         "name": "Dual Destinies",
         "folder": "DD",
         "bobby": {
-            "filename": "Bobby-Fulbright.7z"
+            "ripped": "in1tiate",
+            "appear": "Dual Destinies",
+            "description": "",
+            "filename": "Fulbright.7z",
+            "filetypes": [
+                "WEBP",
+                "GIF"
+            ]
         },
         "sasha": {
             "filename": "Sasha-Buckler.7z"
