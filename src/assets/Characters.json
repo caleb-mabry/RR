@@ -210,6 +210,16 @@
                 "WEBP",
                 "GIF"
             ]
+        },
+        "larry": {
+            "ripped": "Jay Faraday",
+            "appear": "PLvsPW-4",
+            "description": "",
+            "filename": "Larry.7z",
+            "filetypes": [
+                "WEBP",
+                "GIF"
+            ]
         }
     },
     "dgs1+2": {
