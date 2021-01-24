@@ -19,7 +19,13 @@
             <a
               href="https://www.youtube.com/teamturnabout"
               id="turnabout-link"
-            >Team Turnabout,</a> go check them out!
+            >Team Turnabout,</a>
+            and
+                        <a
+              href="https://objection.lol/"
+              id="objection-lol"
+            >Objection.lol,</a>
+            go check them out!
           </p>
         </div>
       </div>
@@ -144,6 +150,16 @@ p {
   opacity: 0.8;
 }
 
+#objection-lol {
+  text-decoration: underline;
+  padding: 0px;
+  border-radius: 0px;
+  font-size: inherit;
+  background-color: inherit;
+}
+#objection-lol:hover {
+  opacity: 0.8;
+}
 @media only screen and (max-width: 1339px) {
   main {
     width: 100%;
