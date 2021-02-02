@@ -3,14 +3,24 @@
     <router-link to="/">Back</router-link>
 
     <div class="container">
-      <router-link
-        v-for="item in allCharacters"
-        :key="item.id"
-        :to="{ name: 'Episode', params: { characterEpisode: item } }"
-        class="link-title"
-      >
-        <img :src="imageName(item)" class="tile-image" :alt="item" />
-      </router-link>
+      <div v-for="item in allCharacters" :key="item.id" class="div-container">
+        <router-link
+          v-if="isUnavailable(item) === false"
+          :to="{ name: 'Episode', params: { characterEpisode: item } }"
+          class="link-title"
+        >
+          <img :src="imageName(item)" class="tile-image" :alt="item" />
+        </router-link>
+        <router-link v-else :to="{}" class="link-title">
+          <img
+            :src="imageName(item)"
+            :class="{ is_unavailable: isUnavailable(item) }"
+            class="tile-image"
+            :alt="item"
+          />
+          <div>{{ item }} is currently unavailable</div>
+        </router-link>
+      </div>
     </div>
 
     <h1 id="selected-episode">{{ selectedEpisode }}</h1>
@@ -70,6 +80,21 @@ export default {
     },
     imageLoadError() {
       console.log("Error loading image");
+    },
+    isUnavailable(game) {
+      console.log(game);
+      if (
+        [
+          "plvaa",
+          "dgs1+2",
+          "investigations2",
+          "apollojustice",
+          "trilogy",
+        ].includes(game)
+      ) {
+        return true;
+      }
+      return false;
     },
     s3BucketPath: function (item) {
       let folder = Characters[this.$route.params.characterEpisode].folder;
@@ -163,7 +188,10 @@ a {
   max-width: 100%;
   height: auto;
 }
-
+.div-container {
+  width: 200px;
+  padding: 1px;
+}
 #selected-episode {
   text-align: center;
 }
@@ -191,6 +219,10 @@ a {
   justify-content: space-around;
   width: 100%;
   transition: all 0.2s;
+}
+.is_unavailable {
+  opacity: 0.4;
+  filter: alpha(opacity=40); /* msie */
 }
 @media only screen and (max-width: 1339px) {
   .link-title {

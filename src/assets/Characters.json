@@ -1,130 +1,25 @@
 {
-    "trilogy": {
-        "name": "Trilogy",
-        "folder": "Tri",
-        "gumshoe": {
-            "filename": "Gumshoe.7z"
-        },
-        "lisa": {
-            "filename": "Lisa-Basil.zip"
-        },
-        "polly": {
-            "filename": "Polly.zip"
-        },
-        "desiree": {
-            "filename": "Desiree.zip"
-        },
-        "matt": {
-            "filename": "Matt-Engarde.zip"
-        },
-        "godot": {
-            "filename": "Godot.rar"
-        }
-    },
-    "apollojustice": {
-        "name": "Apollo Justice",
-        "folder": "AJ",
-        "court": {
-            "filename": "Backgrounds.zip"
-        },
-        "wesley": {
-            "filename": "Wesley-Stickler.zip"
-        },
-        "hobo": {
-            "filename": "Hobo-Phoenix.7z"
-        },
-        "wocky": {
-            "filename": "Wocky-Kitaki.zip"
-        },
-        "judge-aj": {
-            "filename": "Judge.7z"
-        },
-        "payne": {
-            "filename": "Payne.rar"
-        },
-        "klavier": {
-            "filename": "Klavier-Gavin.7z"
-        }
-    },
     "investigations": {
         "name": "Investigations",
         "folder": "AAI",
-        "edgeworth": {
-            "filename": "Miles-Edgeworth.7z"
-        },
         "colas": {
             "filename": "Colas-Palaeno.zip"
         },
         "kay": {
-            "filename": "Kay-Faraday.zip"
+            "ripped": "Jay Faraday",
+            "appear": "AAI",
+            "description": "",
+            "filename": "Kay.7z",
+            "filetypes": [
+                "WEBP",
+                "GIF"
+            ]
         },
         "lang": {
-            "filename": "Lang.7z"
-        },
-        "ema-aai": {
-            "filename": "Ema-Skye.7z"
-        }
-    },
-    "investigations2": {
-        "name": "Investigations 2",
-        "folder": "AAI2",
-        "backgrounds": {
-            "filename": "backgrounds.7z"
-        },
-        "justine": {
-            "filename": "Justine-Courtney.7z"
-        },
-        "nicole": {
-            "filename": "Nicole.zip"
-        },
-        "young": {
-            "filename": "Young-Dane-Gustava.zip"
-        },
-        "raymond": {
-            "filename": "Raymond.zip"
-        },
-        "sebastion": {
-            "filename": "Sebastian-Debeste.zip"
-        }
-    },
-    "plvaa": {
-        "name": "PLvAA",
-        "folder": "PLvAA",
-        "boistrum": {
-            "ripped": "ThePaperMask",
-            "appear": "PLvsPW-4",
-            "description": "Boistrum is the loud and aggressive captain of the Vigilantes, who are guards charged with keeping watch over Labyrinthia's Bell Tower. ",
-            "filename": "Boistrum.7z",
-            "filetypes": [
-                "WEBP",
-                "GIF"
-            ]
-        },
-        "foxy": {
-            "ripped": "ThePaperMask",
-            "appear": "PLvsPW-4",
-            "description": "Foxy is one of the guards who keep watch over Labyrinthia's Bell Tower who are known as the Vigilantes. The only female member of the Vigilantes, Foxy is overly sensual and enjoys degrading men; in particular her fellow Vigilantes Servius and Treddon, who are completely enamoured with her. ",
-            "filename": "Foxy.7z",
-            "filetypes": [
-                "WEBP",
-                "GIF"
-            ]
-        },
-        "ridelle": {
-            "ripped": "Ellie",
-            "appear": "PLvsPW",
-            "description": "Ridelle Mystere is the librarian of Labyrinthia's Great Archive. Her love of puzzles leads her to collect any that Hershel Layton and Phoenix Wright may have missed or been unable to solve during their time in the town, allowing them to solve them at a later time. ",
-            "filename": "Ridelle.7z",
-            "filetypes": [
-                "WEBP",
-                "GIF"
-            ]
-        },
-        "shakey": {
-            "ripped": "Daryll",
-            "appear": "PLvsPW-4",
-            "description": "Shakey is one of the guards who keep watch over Labyrinthia's Bell Tower known as the Vigilantes. He is constantly shaking and covered in bandages from frequently falling over. ",
-            "filename": "Shakey.7z",
+            "ripped": "Jay Faraday",
+            "appear": "AAI",
+            "description": "",
+            "filename": "Kay.7z",
             "filetypes": [
                 "WEBP",
                 "GIF"
@@ -140,12 +35,8 @@
             "description": "",
             "filename": "Fulbright.7z",
             "filetypes": [
-                "WEBP",
                 "GIF"
             ]
-        },
-        "sasha": {
-            "filename": "Sasha-Buckler.7z"
         }
     },
     "soj": {
@@ -156,26 +47,6 @@
             "appear": "PLvsPW-4",
             "description": "",
             "filename": "Phoenix.7z",
-            "filetypes": [
-                "WEBP",
-                "GIF"
-            ]
-        },
-        "behleeb": {
-            "ripped": "Nicco",
-            "appear": "PLvsPW-4",
-            "description": "",
-            "filename": "Beh'leeb.7z",
-            "filetypes": [
-                "WEBP",
-                "GIF"
-            ]
-        },
-        "blackquill": {
-            "ripped": "Nicco",
-            "appear": "PLvsPW-4",
-            "description": "",
-            "filename": "Blackquill.7z",
             "filetypes": [
                 "WEBP",
                 "GIF"
@@ -230,6 +101,119 @@
         },
         "haori": {
             "filename": "Haori.zip"
+        }
+    },
+    "plvaa": {
+        "name": "PLvAA",
+        "folder": "PLvAA",
+        "boistrum": {
+            "ripped": "ThePaperMask",
+            "appear": "PLvsPW-4",
+            "description": "Boistrum is the loud and aggressive captain of the Vigilantes, who are guards charged with keeping watch over Labyrinthia's Bell Tower. ",
+            "filename": "Boistrum.7z",
+            "filetypes": [
+                "WEBP",
+                "GIF"
+            ]
+        },
+        "foxy": {
+            "ripped": "ThePaperMask",
+            "appear": "PLvsPW-4",
+            "description": "Foxy is one of the guards who keep watch over Labyrinthia's Bell Tower who are known as the Vigilantes. The only female member of the Vigilantes, Foxy is overly sensual and enjoys degrading men; in particular her fellow Vigilantes Servius and Treddon, who are completely enamoured with her. ",
+            "filename": "Foxy.7z",
+            "filetypes": [
+                "WEBP",
+                "GIF"
+            ]
+        },
+        "ridelle": {
+            "ripped": "Ellie",
+            "appear": "PLvsPW",
+            "description": "Ridelle Mystere is the librarian of Labyrinthia's Great Archive. Her love of puzzles leads her to collect any that Hershel Layton and Phoenix Wright may have missed or been unable to solve during their time in the town, allowing them to solve them at a later time. ",
+            "filename": "Ridelle.7z",
+            "filetypes": [
+                "WEBP",
+                "GIF"
+            ]
+        },
+        "shakey": {
+            "ripped": "Daryll",
+            "appear": "PLvsPW-4",
+            "description": "Shakey is one of the guards who keep watch over Labyrinthia's Bell Tower known as the Vigilantes. He is constantly shaking and covered in bandages from frequently falling over. ",
+            "filename": "Shakey.7z",
+            "filetypes": [
+                "WEBP",
+                "GIF"
+            ]
+        }
+    },
+    "investigations2": {
+        "name": "Investigations 2",
+        "folder": "AAI2",
+        "backgrounds": {
+            "filename": "backgrounds.7z"
+        },
+        "justine": {
+            "filename": "Justine-Courtney.7z"
+        },
+        "nicole": {
+            "filename": "Nicole.zip"
+        },
+        "young": {
+            "filename": "Young-Dane-Gustava.zip"
+        },
+        "raymond": {
+            "filename": "Raymond.zip"
+        },
+        "sebastion": {
+            "filename": "Sebastian-Debeste.zip"
+        }
+    },
+    "apollojustice": {
+        "name": "Apollo Justice",
+        "folder": "AJ",
+        "court": {
+            "filename": "Backgrounds.zip"
+        },
+        "wesley": {
+            "filename": "Wesley-Stickler.zip"
+        },
+        "hobo": {
+            "filename": "Hobo-Phoenix.7z"
+        },
+        "wocky": {
+            "filename": "Wocky-Kitaki.zip"
+        },
+        "judge-aj": {
+            "filename": "Judge.7z"
+        },
+        "payne": {
+            "filename": "Payne.rar"
+        },
+        "klavier": {
+            "filename": "Klavier-Gavin.7z"
+        }
+    },
+    "trilogy": {
+        "name": "Trilogy",
+        "folder": "Tri",
+        "gumshoe": {
+            "filename": "Gumshoe.7z"
+        },
+        "lisa": {
+            "filename": "Lisa-Basil.zip"
+        },
+        "polly": {
+            "filename": "Polly.zip"
+        },
+        "desiree": {
+            "filename": "Desiree.zip"
+        },
+        "matt": {
+            "filename": "Matt-Engarde.zip"
+        },
+        "godot": {
+            "filename": "Godot.rar"
         }
     }
 }
