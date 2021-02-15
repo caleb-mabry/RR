@@ -55,10 +55,7 @@
         needed files. That, and if any errors are caught, we can fix them
         quickly if you're unavailable.
       </p>
-      <a
-        href="https://docs.google.com/forms/d/e/1FAIpQLSdrB8r_qtHRB1PgqbKVzoRPpKU2o6GE85zN8pH0rV3r6vhroQ/viewform?usp=sf_link"
-        >Submit</a
-      >
+      <router-link to="Submit/Form">Submit</router-link>
     </div>
   </div>
 </template>
