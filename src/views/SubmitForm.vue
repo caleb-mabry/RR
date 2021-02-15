@@ -35,15 +35,24 @@ export default {
         credit: "",
         char: "",
         ripLink: "",
+        ip: "",
         notSubmitted: true
         }
+    },
+    created() {
+        axios.get(`https://api.ipdata.co?api-key=d1768b77ff54a58adff020b2f0451a5a182be7941cb777030aa01d29`)
+        .then(data => {
+            this.ip = data.data.ip
+        })
+        .catch(error => this.ip = "")
     },
       methods: {
     submit: function () {
         axios.post("https://statuesque-ripe-maraca.glitch.me/form-submit", {
             credit: this.credit,
             char: this.char,
-            ripLink: this.ripLink
+            ripLink: this.ripLink,
+            ip: this.ip
         })
         .then(function (response) {
             console.log(response);
