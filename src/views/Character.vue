@@ -6,14 +6,27 @@
 
     <div class="outer-container">
       <div class="container">
-        <div class="left">
           <h1 id="character-name">{{ character }}</h1>
-          <img :src="fullbody" alt id="character-image" />
-          <h1 id="ripper-name">Ripped By: {{ ripped }}</h1>
+          <div v-if="hasLink()">
+            <div class="link-ripper" >Ripped by: {{ripped}} | 
+            <span v-for="l in link" :key="l">
+              <a :href="l[getKey(l)]" class="link-ripper">{{getKey(l)[0]}}</a>
+            </span>
+            </div>
+          </div>
+          <h1 v-else id="ripper-name">Ripped By: {{ ripped }}</h1>
+
+
+
+        <!-- Overrides -->
+        <div v-if="hasOverride()" class="download-options">
+          <span v-for="override in overrides" style="margin:10px" :key=override>
+            <a :href="s3BucketPathOverride(override)">{{override}}</a>
+            </span>
         </div>
-        <div class="right">
-          <p id="description">{{ description }}</p>
-          <div class="download-options">
+
+        <!-- Regular Assets -->
+          <div v-else class="download-options">
             <a
               :href="s3BucketPath(character, type)"
               class="button"
@@ -22,7 +35,7 @@
               >{{ type }}</a
             >
           </div>
-          <div class="tooltip">
+                            <div class="tooltip">
             What's the difference?
             <span class="tooltiptext"
               >TNC and VLS use a format called WEBP. It allows for higher
@@ -34,8 +47,8 @@
               WEBP, however most characters are not in WEBP as of now. Unless
               you're getting these for an AO2 server, WEBP is recommended.</span
             >
-          </div>
         </div>
+
       </div>
     </div>
   </div>
@@ -53,10 +66,22 @@ export default {
     };
   },
   methods: {
+    hasOverride: function() {
+      return Characters[this.characterEpisode][this.character].override
+    },
+    hasLink: function() {
+      return Characters[this.characterEpisode][this.character].link
+    },
+    getKey: function(item) {
+      return Object.keys(item)
+    },
+    s3BucketPathOverride: function(item) {
+      let folder = Characters[this.$route.params.characterEpisode].folder;
+      return `${this.fileUrl}/${folder}/${item}`;
+    },
     s3BucketPath: function (item, type) {
       let folder = Characters[this.$route.params.characterEpisode].folder;
-      let filename =
-        Characters[this.$route.params.characterEpisode][item].filename;
+      let filename = Characters[this.$route.params.characterEpisode][item].filename;
       return `${this.fileUrl}/${folder}/${type}_${filename}`;
     },
   },
@@ -64,11 +89,17 @@ export default {
     description() {
       return Characters[this.characterEpisode][this.character].description;
     },
+    link() {
+      return Characters[this.characterEpisode][this.character].link
+    },
     ripped() {
       return Characters[this.characterEpisode][this.character].ripped;
     },
     appear() {
       return Characters[this.characterEpisode][this.character].appear;
+    },
+    overrides() {
+      return Characters[this.characterEpisode][this.character].override;
     },
     fullbody() {
       try {
@@ -85,11 +116,15 @@ export default {
 </script>
 
 <style scoped>
-.outer-container {
+.link-ripper {
+  font-size: 2rem;
+  margin: 10px;
 }
 .container {
+  color: whitesmoke;
   display: flex;
   flex-wrap: wrap;
+  flex-direction: column;
   width: 60%;
   padding: 2%;
   border-radius: 5px;
@@ -99,38 +134,39 @@ export default {
     rgba(50, 67, 85, 1) 100%
   );
   justify-content: space-around;
+  text-align: center;
+  height: fit-content;
   margin: auto;
 }
 .left {
   text-transform: capitalize;
   text-align: center;
   color: whitesmoke;
-  width: 50%;
+  width: 100%;
 }
 .right {
-  width: 50%;
+  width: 100%;
 }
 .download-options {
+  height: fit-content;
   display: flex;
-  padding-top: 50%;
+  flex-wrap: wrap;
+  margin: 2px;
+  width:100%;
   justify-content: space-evenly;
 }
-#description {
-  padding: 5%;
-  font-size: 16px;
-  color: whitesmoke;
-}
+
 #character-image {
   max-width: 80%;
   height: auto;
 }
 h1 {
-  font-size: 40px;
+  font-size: 2.5rem;
 }
 .button {
   padding: 2%;
   width: 30%;
-  font-size: 16px;
+  font-size: 1.2rem;
 }
 .fileinfo {
   text-align: center;
@@ -143,7 +179,7 @@ h1 {
   width: 100%;
   color: whitesmoke;
   display: inline-block;
-  font-size: 17px;
+  font-size: 1rem;
   border-bottom: 1px dotted whitesmoke; /* If you want dots under the hoverable text */
 }
 
@@ -160,9 +196,12 @@ h1 {
   position: absolute;
   transform: translateY(10%);
   left: 0px;
-  top: 0;
+  top: 10px;
   transition: all 0.2s;
   z-index: 1;
+}
+#ripper-name {
+  text-align: center;
 }
 
 /* Show the tooltip text when you mouse over the tooltip container */
@@ -209,8 +248,7 @@ h1 {
   .button {
     padding: 2%;
     margin: 2%;
-    width: 60%;
-    font-size: 16px;
+    font-size: 1rem;
   }
 }
 </style>

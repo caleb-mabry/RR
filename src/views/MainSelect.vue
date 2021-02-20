@@ -11,7 +11,7 @@
         >
           <img :src="imageName(item)" class="tile-image" :alt="item" />
         </router-link>
-        <router-link v-else :to="{}" class="link-title">
+        <router-link v-else :to="{}" class="link-title mobile-unavailable">
           <img
             :src="imageName(item)"
             :class="{ is_unavailable: isUnavailable(item) }"
@@ -189,7 +189,7 @@ a {
   height: auto;
 }
 .div-container {
-  width: 200px;
+  width: 10rem;
   padding: 1px;
 }
 #selected-episode {
@@ -226,12 +226,15 @@ a {
 }
 @media only screen and (max-width: 1339px) {
   .link-title {
-    max-width: 25%;
+    max-width: 10rem;
     margin: 5px;
   }
   .link {
-    width: 25%;
+    width: 10rem;
     margin: 5px;
+  }
+  .mobile-unavailable {
+    display: none;
   }
 }
 </style>

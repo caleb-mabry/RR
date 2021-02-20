@@ -49,6 +49,24 @@
                 "GIF"
             ]
         },
+        "soj_icons": {
+            "ripped": "idaot",
+            "link": [{"ACENVL": "https://www.youtube.com/c/ACENVL"}],
+            "appear": "PLvsPW-4",
+            "description": "",
+            "filename": "Phoenix.7z",
+            "filetypes": [
+                "WEBP",
+                "GIF"
+            ],
+            "override": [
+                "evidence.7z",
+                "evidence_upscaled2x.7z",
+                "profiles.7z",
+                "profiles_upscaled2x.7z"
+            ]
+            
+        },
         "apollo": {
             "ripped": "Jay Faraday",
             "appear": "PLvsPW-4",
