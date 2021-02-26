@@ -62,7 +62,7 @@ import Characters from "../assets/Characters.json";
 export default {
   data() {
     return {
-      fileUrl: "https://ripping-resource.s3.amazonaws.com",
+      fileUrl: "https://dxf1sbhzncqmd.cloudfront.net",
       characterEpisode: this.$route.params.characterEpisode,
       character: this.$route.params.character,
     };
