@@ -83,15 +83,7 @@ export default {
     },
     isUnavailable(game) {
       console.log(game);
-      if (
-        [
-          "plvaa",
-          "dgs1+2",
-          "investigations2",
-          "apollojustice",
-          "trilogy",
-        ].includes(game)
-      ) {
+      if (["plvaa", "dgs1+2", "investigations2", "trilogy"].includes(game)) {
         return true;
       }
       return false;

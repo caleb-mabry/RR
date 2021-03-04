@@ -51,7 +51,11 @@
         },
         "soj_icons": {
             "ripped": "idaot",
-            "link": [{"ACENVL": "https://www.youtube.com/c/ACENVL"}],
+            "link": [
+                {
+                    "ACENVL": "https://www.youtube.com/c/ACENVL"
+                }
+            ],
             "appear": "PLvsPW-4",
             "description": "",
             "filename": "Phoenix.7z",
@@ -65,7 +69,6 @@
                 "profiles.7z",
                 "profiles_upscaled2x.7z"
             ]
-            
         },
         "apollo": {
             "ripped": "Jay Faraday",
@@ -102,6 +105,34 @@
             "appear": "PLvsPW-4",
             "description": "",
             "filename": "Larry.7z",
+            "filetypes": [
+                "WEBP",
+                "GIF"
+            ]
+        }
+    },
+    "apollojustice": {
+        "name": "Apollo Justice",
+        "folder": "AJ",
+        "hoboPhoenix": {
+            "ripped": "JonasP",
+            "filename": "HoboPhoenix.7z",
+            "filetypes": [
+                "WEBP",
+                "GIF"
+            ]
+        },
+        "flashbackPhoenix": {
+            "ripped": "Guiguiba and Team Turnabout",
+            "filename": "AJFlashbackPhoenix.7z",
+            "filetypes": [
+                "WEBP",
+                "GIF"
+            ]
+        },
+        "zakGramarye": {
+            "ripped": "Nicco1221, Team Turnabout (Zak), and Jay Faraday (Shadi Smith)",
+            "filename": "Zak.7z",
             "filetypes": [
                 "WEBP",
                 "GIF"
@@ -182,31 +213,6 @@
         },
         "sebastion": {
             "filename": "Sebastian-Debeste.zip"
-        }
-    },
-    "apollojustice": {
-        "name": "Apollo Justice",
-        "folder": "AJ",
-        "court": {
-            "filename": "Backgrounds.zip"
-        },
-        "wesley": {
-            "filename": "Wesley-Stickler.zip"
-        },
-        "hobo": {
-            "filename": "Hobo-Phoenix.7z"
-        },
-        "wocky": {
-            "filename": "Wocky-Kitaki.zip"
-        },
-        "judge-aj": {
-            "filename": "Judge.7z"
-        },
-        "payne": {
-            "filename": "Payne.rar"
-        },
-        "klavier": {
-            "filename": "Klavier-Gavin.7z"
         }
     },
     "trilogy": {
