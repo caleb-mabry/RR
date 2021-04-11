@@ -12,11 +12,65 @@
                 "GIF"
             ]
         },
+        "rhoda": {
+            "ripped": "JonasP",
+            "appear": "AAI",
+            "description": "",
+            "filename": "Rhoda.7z",
+            "filetypes": [
+                "WEBP",
+                "GIF"
+            ]
+        },
+        "lance": {
+            "ripped": "Amano",
+            "appear": "AAI",
+            "description": "",
+            "filename": "Lance.7z",
+            "filetypes": [
+                "WEBP",
+                "GIF"
+            ]
+        },
+        "alba": {
+            "ripped": "Fruitbat",
+            "appear": "AAI",
+            "description": "",
+            "filename": "Alba.7z",
+            "filetypes": [
+                "WEBP",
+                "GIF"
+            ]
+        },
         "lang": {
             "ripped": "Jay Faraday",
             "appear": "AAI",
             "description": "",
             "filename": "Lang.7z",
+            "filetypes": [
+                "WEBP",
+                "GIF"
+            ]
+        }
+    },
+    "trilogy": {
+        "name": "Trilogy",
+        "folder": "Tri",
+        "desiree": {
+            "ripped": "JonasP",
+            "appear": "Trilogy",
+            "description": "",
+            "filename": "Desiree.7z",
+            "filetypes": [
+                "WEBP",
+                "GIF"
+            ]
+        },
+        "penny": {
+            "ripped": "Cake",
+            "appear": "Trilogy",
+            "description": "",
+            "filename": "Penny.7z",
             "filetypes": [
                 "WEBP",
                 "GIF"
@@ -162,28 +216,6 @@
             ]
         }
     },
-    "investigations2": {
-        "name": "Investigations 2",
-        "folder": "AAI2",
-        "backgrounds": {
-            "filename": "backgrounds.7z"
-        },
-        "justine": {
-            "filename": "Justine-Courtney.7z"
-        },
-        "nicole": {
-            "filename": "Nicole.zip"
-        },
-        "young": {
-            "filename": "Young-Dane-Gustava.zip"
-        },
-        "raymond": {
-            "filename": "Raymond.zip"
-        },
-        "sebastion": {
-            "filename": "Sebastian-Debeste.zip"
-        }
-    },
     "apollojustice": {
         "name": "Apollo Justice",
         "folder": "AJ",
@@ -207,28 +239,6 @@
         },
         "klavier": {
             "filename": "Klavier-Gavin.7z"
-        }
-    },
-    "trilogy": {
-        "name": "Trilogy",
-        "folder": "Tri",
-        "gumshoe": {
-            "filename": "Gumshoe.7z"
-        },
-        "lisa": {
-            "filename": "Lisa-Basil.zip"
-        },
-        "polly": {
-            "filename": "Polly.zip"
-        },
-        "desiree": {
-            "filename": "Desiree.zip"
-        },
-        "matt": {
-            "filename": "Matt-Engarde.zip"
-        },
-        "godot": {
-            "filename": "Godot.rar"
         }
     }
 }

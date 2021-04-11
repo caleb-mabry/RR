@@ -89,7 +89,6 @@ export default {
           "dgs1+2",
           "investigations2",
           "apollojustice",
-          "trilogy",
         ].includes(game)
       ) {
         return true;
