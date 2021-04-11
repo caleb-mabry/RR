@@ -6,36 +6,38 @@
 
     <div class="outer-container">
       <div class="container">
-          <h1 id="character-name">{{ character }}</h1>
-          <div v-if="hasLink()">
-            <div class="link-ripper" >Ripped by: {{ripped}} | 
+        <h1 id="character-name">{{ character }}</h1>
+        <div v-if="hasLink()">
+          <div class="link-ripper">
+            Ripped by: {{ ripped }} |
             <span v-for="l in link" :key="l">
-              <a :href="l[getKey(l)]" class="link-ripper">{{getKey(l)[0]}}</a>
+              <a :href="l[getKey(l)]" class="link-ripper">{{ getKey(l)[0] }}</a>
             </span>
-            </div>
           </div>
-          <h1 v-else id="ripper-name">Ripped By: {{ ripped }}</h1>
-
-
+        </div>
+        <h1 v-else id="ripper-name">Ripped By: {{ ripped }}</h1>
 
         <!-- Overrides -->
         <div v-if="hasOverride()" class="download-options">
-          <span v-for="override in overrides" style="margin:10px" :key=override>
-            <a :href="s3BucketPathOverride(override)">{{override}}</a>
-            </span>
+          <span
+            v-for="override in overrides"
+            style="margin: 10px"
+            :key="override"
+          >
+            <a :href="s3BucketPathOverride(override)">{{ override }}</a>
+          </span>
         </div>
 
         <!-- Regular Assets -->
-          <div v-else class="download-options">
-            <a
-              :href="s3BucketPath(character, type)"
-              class="button"
-              v-for="type in filetypes"
-              :key="type"
-              >{{ type }}</a
-            >
-          </div>
-                            <div class="tooltip">
+        <div v-else class="download-options">
+          <a
+            :href="s3BucketPath(character, type)"
+            class="button"
+            v-for="type in filetypes"
+            :key="type"
+            >{{ type }}</a
+          >
+          <div class="tooltip">
             What's the difference?
             <span class="tooltiptext"
               >TNC and VLS use a format called WEBP. It allows for higher
@@ -47,8 +49,8 @@
               WEBP, however most characters are not in WEBP as of now. Unless
               you're getting these for an AO2 server, WEBP is recommended.</span
             >
+          </div>
         </div>
-
       </div>
     </div>
   </div>
@@ -60,28 +62,29 @@ import Characters from "../assets/Characters.json";
 export default {
   data() {
     return {
-      fileUrl: "https://ripping-resource.s3.amazonaws.com",
+      fileUrl: "https://dxf1sbhzncqmd.cloudfront.net",
       characterEpisode: this.$route.params.characterEpisode,
       character: this.$route.params.character,
     };
   },
   methods: {
-    hasOverride: function() {
-      return Characters[this.characterEpisode][this.character].override
+    hasOverride: function () {
+      return Characters[this.characterEpisode][this.character].override;
     },
-    hasLink: function() {
-      return Characters[this.characterEpisode][this.character].link
+    hasLink: function () {
+      return Characters[this.characterEpisode][this.character].link;
     },
-    getKey: function(item) {
-      return Object.keys(item)
+    getKey: function (item) {
+      return Object.keys(item);
     },
-    s3BucketPathOverride: function(item) {
+    s3BucketPathOverride: function (item) {
       let folder = Characters[this.$route.params.characterEpisode].folder;
       return `${this.fileUrl}/${folder}/${item}`;
     },
     s3BucketPath: function (item, type) {
       let folder = Characters[this.$route.params.characterEpisode].folder;
-      let filename = Characters[this.$route.params.characterEpisode][item].filename;
+      let filename =
+        Characters[this.$route.params.characterEpisode][item].filename;
       return `${this.fileUrl}/${folder}/${type}_${filename}`;
     },
   },
@@ -90,7 +93,7 @@ export default {
       return Characters[this.characterEpisode][this.character].description;
     },
     link() {
-      return Characters[this.characterEpisode][this.character].link
+      return Characters[this.characterEpisode][this.character].link;
     },
     ripped() {
       return Characters[this.characterEpisode][this.character].ripped;
@@ -152,7 +155,7 @@ export default {
   display: flex;
   flex-wrap: wrap;
   margin: 2px;
-  width:100%;
+  width: 100%;
   justify-content: space-evenly;
 }
 
