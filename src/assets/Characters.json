@@ -246,30 +246,5 @@
                 "GIF"
             ]
         }
-    },
-    "apollojustice": {
-        "name": "Apollo Justice",
-        "folder": "AJ",
-        "court": {
-            "filename": "Backgrounds.zip"
-        },
-        "wesley": {
-            "filename": "Wesley-Stickler.zip"
-        },
-        "hobo": {
-            "filename": "Hobo-Phoenix.7z"
-        },
-        "wocky": {
-            "filename": "Wocky-Kitaki.zip"
-        },
-        "judge-aj": {
-            "filename": "Judge.7z"
-        },
-        "payne": {
-            "filename": "Payne.rar"
-        },
-        "klavier": {
-            "filename": "Klavier-Gavin.7z"
-        }
     }
 }

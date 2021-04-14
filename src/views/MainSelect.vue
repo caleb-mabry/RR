@@ -88,7 +88,6 @@ export default {
           "plvaa",
           "dgs1+2",
           "investigations2",
-          "apollojustice",
         ].includes(game)
       ) {
         return true;
