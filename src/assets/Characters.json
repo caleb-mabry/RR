@@ -1,4 +1,56 @@
 {
+    "trilogy": {
+        "name": "Trilogy",
+        "folder": "Tri",
+        "desiree": {
+            "ripped": "JonasP",
+            "appear": "Trilogy",
+            "description": "",
+            "filename": "Desiree.7z",
+            "filetypes": [
+                "WEBP",
+                "GIF"
+            ]
+        },
+        "penny": {
+            "ripped": "Cake",
+            "appear": "Trilogy",
+            "description": "",
+            "filename": "Penny.7z",
+            "filetypes": [
+                "WEBP",
+                "GIF"
+            ]
+        }
+    },
+    "apollojustice": {
+        "name": "Apollo Justice",
+        "folder": "AJ",
+        "hoboPhoenix": {
+            "ripped": "JonasP",
+            "filename": "HoboPhoenix.7z",
+            "filetypes": [
+                "WEBP",
+                "GIF"
+            ]
+        },
+        "flashbackPhoenix": {
+            "ripped": "Guiguiba and Team Turnabout",
+            "filename": "AJFlashbackPhoenix.7z",
+            "filetypes": [
+                "WEBP",
+                "GIF"
+            ]
+        },
+        "zakGramarye": {
+            "ripped": "Nicco1221, Team Turnabout (Zak), and Jay Faraday (Shadi Smith)",
+            "filename": "Zak.7z",
+            "filetypes": [
+                "WEBP",
+                "GIF"
+            ]
+        }
+    },
     "investigations": {
         "name": "Investigations",
         "folder": "AAI",
@@ -47,30 +99,6 @@
             "appear": "AAI",
             "description": "",
             "filename": "Lang.7z",
-            "filetypes": [
-                "WEBP",
-                "GIF"
-            ]
-        }
-    },
-    "trilogy": {
-        "name": "Trilogy",
-        "folder": "Tri",
-        "desiree": {
-            "ripped": "JonasP",
-            "appear": "Trilogy",
-            "description": "",
-            "filename": "Desiree.7z",
-            "filetypes": [
-                "WEBP",
-                "GIF"
-            ]
-        },
-        "penny": {
-            "ripped": "Cake",
-            "appear": "Trilogy",
-            "description": "",
-            "filename": "Penny.7z",
             "filetypes": [
                 "WEBP",
                 "GIF"
@@ -159,34 +187,6 @@
             "appear": "PLvsPW-4",
             "description": "",
             "filename": "Larry.7z",
-            "filetypes": [
-                "WEBP",
-                "GIF"
-            ]
-        }
-    },
-    "apollojustice": {
-        "name": "Apollo Justice",
-        "folder": "AJ",
-        "hoboPhoenix": {
-            "ripped": "JonasP",
-            "filename": "HoboPhoenix.7z",
-            "filetypes": [
-                "WEBP",
-                "GIF"
-            ]
-        },
-        "flashbackPhoenix": {
-            "ripped": "Guiguiba and Team Turnabout",
-            "filename": "AJFlashbackPhoenix.7z",
-            "filetypes": [
-                "WEBP",
-                "GIF"
-            ]
-        },
-        "zakGramarye": {
-            "ripped": "Nicco1221, Team Turnabout (Zak), and Jay Faraday (Shadi Smith)",
-            "filename": "Zak.7z",
             "filetypes": [
                 "WEBP",
                 "GIF"
