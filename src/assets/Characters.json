@@ -2,7 +2,7 @@
     "trilogy": {
         "name": "Trilogy",
         "folder": "Tri",
-        "desiree": {
+        "Desiree": {
             "ripped": "JonasP",
             "appear": "Trilogy",
             "description": "",
@@ -12,7 +12,7 @@
                 "GIF"
             ]
         },
-        "penny": {
+        "Penny": {
             "ripped": "Cake",
             "appear": "Trilogy",
             "description": "",
@@ -26,7 +26,7 @@
     "apollojustice": {
         "name": "Apollo Justice",
         "folder": "AJ",
-        "hoboPhoenix": {
+        "HoboPhoenix": {
             "ripped": "JonasP",
             "filename": "HoboPhoenix.7z",
             "filetypes": [
@@ -34,7 +34,7 @@
                 "GIF"
             ]
         },
-        "flashbackPhoenix": {
+        "FlashbackPhoenix": {
             "ripped": "Guiguiba and Team Turnabout",
             "filename": "AJFlashbackPhoenix.7z",
             "filetypes": [
@@ -42,7 +42,7 @@
                 "GIF"
             ]
         },
-        "zakGramarye": {
+        "ZakGramarye": {
             "ripped": "Nicco1221, Team Turnabout (Zak), and Jay Faraday (Shadi Smith)",
             "filename": "Zak.7z",
             "filetypes": [
@@ -54,7 +54,7 @@
     "investigations": {
         "name": "Investigations",
         "folder": "AAI",
-        "kay": {
+        "Kay": {
             "ripped": "Jay Faraday",
             "appear": "AAI",
             "description": "",
@@ -64,7 +64,7 @@
                 "GIF"
             ]
         },
-        "rhoda": {
+        "Rhoda": {
             "ripped": "JonasP",
             "appear": "AAI",
             "description": "",
@@ -74,7 +74,7 @@
                 "GIF"
             ]
         },
-        "lance": {
+        "Lance": {
             "ripped": "Aizen",
             "appear": "AAI",
             "description": "",
@@ -84,7 +84,7 @@
                 "GIF"
             ]
         },
-        "alba": {
+        "Alba": {
             "ripped": "Fruitbat",
             "appear": "AAI",
             "description": "",
@@ -94,7 +94,7 @@
                 "GIF"
             ]
         },
-        "lang": {
+        "Lang": {
             "ripped": "Jay Faraday",
             "appear": "AAI",
             "description": "",
@@ -108,7 +108,7 @@
     "dualdestinies": {
         "name": "Dual Destinies",
         "folder": "DD",
-        "bobby": {
+        "Bobby": {
             "ripped": "in1tiate",
             "appear": "Dual Destinies",
             "description": "",
@@ -121,7 +121,7 @@
     "soj": {
         "name": "SOJ",
         "folder": "SOJ",
-        "phoenix": {
+        "Phoenix": {
             "ripped": "Jay Faraday",
             "appear": "PLvsPW-4",
             "description": "",
@@ -131,7 +131,7 @@
                 "GIF"
             ]
         },
-        "soj_icons": {
+        "Soj_icons": {
             "ripped": "idaot",
             "link": [
                 {
@@ -152,7 +152,7 @@
                 "profiles_upscaled2x.7z"
             ]
         },
-        "apollo": {
+        "Apollo": {
             "ripped": "Jay Faraday",
             "appear": "PLvsPW-4",
             "description": "",
@@ -162,7 +162,7 @@
                 "GIF"
             ]
         },
-        "judge": {
+        "Judge": {
             "ripped": "Jay Faraday",
             "appear": "PLvsPW-4",
             "description": "",
@@ -172,7 +172,7 @@
                 "GIF"
             ]
         },
-        "ema": {
+        "Ema": {
             "ripped": "Jay Faraday",
             "appear": "PLvsPW-4",
             "description": "",
@@ -182,7 +182,7 @@
                 "GIF"
             ]
         },
-        "larry": {
+        "Larry": {
             "ripped": "Jay Faraday",
             "appear": "PLvsPW-4",
             "description": "",
@@ -196,17 +196,17 @@
     "dgs1+2": {
         "name": "DGS 1+2",
         "folder": "DGS2",
-        "yuujin": {
+        "Yuujin": {
             "filename": "Yuujin-Mikotoba.rar"
         },
-        "haori": {
+        "Haori": {
             "filename": "Haori.zip"
         }
     },
     "plvaa": {
         "name": "PLvAA",
         "folder": "PLvAA",
-        "boistrum": {
+        "Boistrum": {
             "ripped": "ThePaperMask",
             "appear": "PLvsPW-4",
             "description": "Boistrum is the loud and aggressive captain of the Vigilantes, who are guards charged with keeping watch over Labyrinthia's Bell Tower. ",
@@ -216,7 +216,7 @@
                 "GIF"
             ]
         },
-        "foxy": {
+        "Foxy": {
             "ripped": "ThePaperMask",
             "appear": "PLvsPW-4",
             "description": "Foxy is one of the guards who keep watch over Labyrinthia's Bell Tower who are known as the Vigilantes. The only female member of the Vigilantes, Foxy is overly sensual and enjoys degrading men; in particular her fellow Vigilantes Servius and Treddon, who are completely enamoured with her. ",
@@ -226,7 +226,7 @@
                 "GIF"
             ]
         },
-        "ridelle": {
+        "Ridelle": {
             "ripped": "Ellie",
             "appear": "PLvsPW",
             "description": "Ridelle Mystere is the librarian of Labyrinthia's Great Archive. Her love of puzzles leads her to collect any that Hershel Layton and Phoenix Wright may have missed or been unable to solve during their time in the town, allowing them to solve them at a later time. ",
@@ -236,7 +236,7 @@
                 "GIF"
             ]
         },
-        "shakey": {
+        "Shakey": {
             "ripped": "Daryll",
             "appear": "PLvsPW-4",
             "description": "Shakey is one of the guards who keep watch over Labyrinthia's Bell Tower known as the Vigilantes. He is constantly shaking and covered in bandages from frequently falling over. ",
