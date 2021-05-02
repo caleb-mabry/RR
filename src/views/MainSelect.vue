@@ -85,7 +85,6 @@ export default {
       console.log(game);
       if (
         [
-          "plvaa",
           "dgs1+2",
           "investigations2",
         ].includes(game)
