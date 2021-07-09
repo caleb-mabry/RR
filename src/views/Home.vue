@@ -20,11 +20,6 @@
               href="https://www.youtube.com/teamturnabout"
               id="turnabout-link"
             >Team Turnabout,</a>
-            and
-                        <a
-              href="https://objection.lol/"
-              id="objection-lol"
-            >Objection.lol,</a>
             go check them out!
           </p>
         </div>
