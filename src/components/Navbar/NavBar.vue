@@ -12,7 +12,7 @@
         >
       </li>
       <li>
-        <a href="https://discord.com/invite/S8zyJ84">Discord</a>
+        <a href="https://discord.gg/efp3f9q8RE">Discord</a>
       </li>
       <li>
         <a href="https://forms.gle/78DSWT9M4oCzHwFQA">Staff Application</a>
