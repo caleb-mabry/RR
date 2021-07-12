@@ -144,17 +144,6 @@ p {
 #turnabout-link:hover {
   opacity: 0.8;
 }
-
-#objection-lol {
-  text-decoration: underline;
-  padding: 0px;
-  border-radius: 0px;
-  font-size: inherit;
-  background-color: inherit;
-}
-#objection-lol:hover {
-  opacity: 0.8;
-}
 @media only screen and (max-width: 1339px) {
   main {
     width: 100%;
