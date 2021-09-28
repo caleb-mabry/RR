@@ -40,14 +40,14 @@
           <div class="tooltip">
             What's the difference?
             <span class="tooltiptext"
-              >TNC and VLS use a format called WEBP. It allows for higher
+              >Some AO servers use a format called WEBP. It allows for higher
               quality, and can be smaller than the GIF format. Our WEBPs are in
               5:3, the aspect ratio of the 3DS, at 1200x720. GIF is what the
               rest of the AO community uses, is lower quality, as it can only
               allow for 256 colors, and are usually three times larger. Our GIFs
               are higher resolution than our WEBPs (1024x768). AO2 supports
-              WEBP, however most characters are not in WEBP as of now. Unless
-              you're getting these for an AO2 server, WEBP is recommended.</span
+              WEBP, however most characters are not in WEBP as of now. Consult
+              your files/server admins if you are unsure which format to download.</span
             >
           </div>
         </div>
