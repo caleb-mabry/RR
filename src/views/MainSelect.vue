@@ -39,7 +39,6 @@
                 :src="imageName(item)"
                 class="character-image"
                 :alt="item"
-                @error="imageLoadError"
               />
             </router-link>
             <a :href="s3BucketPath(item)" :key="item" class="link" v-else>
@@ -82,7 +81,6 @@ export default {
       console.log("Error loading image");
     },
     isUnavailable(game) {
-      console.log(game);
       if (
         [
           "investigations2",
