@@ -6,7 +6,8 @@
 
     <div class="outer-container">
       <div class="container">
-        <h1 id="character-name">{{ character }}</h1>
+      
+        <h1 id="character-name">{{ getCharacterName() }}</h1>
         <div v-if="hasLink()">
           <div class="link-ripper">
             Ripped by: {{ ripped }} |
@@ -64,10 +65,13 @@ export default {
     return {
       fileUrl: "https://dxf1sbhzncqmd.cloudfront.net",
       characterEpisode: this.$route.params.characterEpisode,
-      character: this.$route.params.character,
-    };
+      character: this.$route.params.character
+  };
   },
   methods: {
+    getCharacterName: function() {
+      return Characters[this.$route.params.characterEpisode][this.$route.params.character].alternateTitle ? Characters[this.$route.params.characterEpisode][this.$route.params.character].alternateTitle : this.$route.params.character
+    },
     hasOverride: function () {
       return Characters[this.characterEpisode][this.character].override;
     },

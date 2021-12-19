@@ -3,6 +3,7 @@
         "name": "Trilogy",
         "folder": "Tri",
         "Desiree": {
+            "alternateTitle": "Desiree DeLite",
             "ripped": "JonasP",
             "appear": "Trilogy",
             "description": "",
@@ -12,7 +13,45 @@
                 "GIF"
             ]
         },
+        "TrilogyPhoenix": {
+            "alternateTitle": "Phoenix Wright",
+            "ripped": "JonasP",
+            "appear": "Trilogy",
+            "description": "",
+            "filename": "Phoenix.7z",
+            "filetypes": [
+                "WEBP",
+                "GIF"
+            ]
+        },
+        "Godot": {
+            "ripped": "Fruitbat",
+            "filename": "Godot.7z",
+            "filetypes": [
+                "WEBP",
+                "GIF"
+            ]
+        },
+        "WillPowersJFA": {
+            "alternateTitle": "Will Powers (JFA)",
+            "ripped": "Fruitbat",
+            "filename": "JFAWill.7z",
+            "filetypes": [
+                "WEBP",
+                "GIF"
+            ]
+        },
+        "TerryFawles": {
+            "alternateTitle": "Terry Fawles",
+            "ripped": "Fruitbat",
+            "filename": "TerryFawles.7z",
+            "filetypes": [
+                "WEBP",
+                "GIF"
+            ]
+        },
         "Penny": {
+            "alternateTitle": "Penny Nichols",
             "ripped": "Cake",
             "appear": "Trilogy",
             "description": "",
@@ -26,7 +65,44 @@
     "apollojustice": {
         "name": "Apollo Justice",
         "folder": "AJ",
+        "AJApollo": {
+            "alternateTitle": "Apollo Justice",
+            "ripped": "in1tiate",
+            "filename": "Apollo.7z",
+            "filetypes": [
+                "WEBP",
+                "GIF"
+            ]
+        },
+        "TrucyWright": {
+            "alternateTitle": "Trucy Wright",
+            "ripped": "Fruitbat",
+            "filename": "Trucy.7z",
+            "filetypes": [
+                "WEBP",
+                "GIF"
+            ]
+        },
+        "TrucyEnigmar": {
+            "alternateTitle": "Trucy Enigmar",
+            "ripped": "Fruitbat",
+            "filename": "TrucyEnigmar.7z",
+            "filetypes": [
+                "WEBP",
+                "GIF"
+            ]
+        },
+        "AJKlavier": {
+            "alternateTitle": "Klavier Gavin",
+            "ripped": "An Englishman",
+            "filename": "Klavier.7z",
+            "filetypes": [
+                "WEBP",
+                "GIF"
+            ]
+        },
         "HoboPhoenix": {
+            "alternateTitle": "Phoenix Wright",
             "ripped": "JonasP",
             "filename": "HoboPhoenix.7z",
             "filetypes": [
@@ -34,7 +110,9 @@
                 "GIF"
             ]
         },
+        
         "FlashbackPhoenix": {
+            "alternateTitle": "Phoenix Wright (Flashback)",
             "ripped": "Guiguiba and Team Turnabout",
             "filename": "AJFlashbackPhoenix.7z",
             "filetypes": [
@@ -43,6 +121,7 @@
             ]
         },
         "ZakGramarye": {
+            "alternateTitle": "Zak Gramarye",
             "ripped": "Nicco1221, Team Turnabout (Zak), and Jay Faraday (Shadi Smith)",
             "filename": "Zak.7z",
             "filetypes": [
@@ -54,7 +133,17 @@
     "investigations": {
         "name": "Investigations",
         "folder": "AAI",
+        "MilesEdgeworthYoung": {
+            "alternateTitle": "Miles Edgeworth (Young)",
+            "ripped": "Jooj11",
+            "filename": "MilesEdgeworthYoungAAI.7z",
+            "filetypes": [
+                "WEBP",
+                "GIF"
+            ]
+        },
         "Gregory": {
+            "alternateTitle": "Gregory Edgeworth",
             "ripped": "Fruitbat",
             "appear": "AAI",
             "description": "",
@@ -65,6 +154,7 @@
             ]
         },
         "Kay": {
+            "alternateTitle": "Kay Faraday",
             "ripped": "Jay Faraday",
             "appear": "AAI",
             "description": "",
@@ -75,6 +165,7 @@
             ]
         },
         "Rhoda": {
+            "alternateTitle": "Rhoda Teneiro",
             "ripped": "JonasP",
             "appear": "AAI",
             "description": "",
@@ -85,6 +176,7 @@
             ]
         },
         "Lance": {
+            "alternateTitle": "Lance Amano",
             "ripped": "Aizen",
             "appear": "AAI",
             "description": "",
@@ -95,6 +187,7 @@
             ]
         },
         "Alba": {
+            "alternateTitle": "Quercus Alba",
             "ripped": "Fruitbat",
             "appear": "AAI",
             "description": "",
@@ -105,6 +198,7 @@
             ]
         },
         "Lang": {
+            "alternateTitle": "Shi-Long Lang",
             "ripped": "Jay Faraday",
             "appear": "AAI",
             "description": "",
@@ -119,6 +213,7 @@
         "name": "PLvAA",
         "folder": "PLvAA",
         "VsPhoenix": {
+            "alternateTitle": "Phoenix Wright",
             "ripped": "In1tiate",
             "appear": "PLvsPW-4",
             "description": "Boistrum is the loud and aggressive captain of the Vigilantes, who are guards charged with keeping watch over Labyrinthia's Bell Tower. ",
@@ -132,7 +227,50 @@
     "dualdestinies": {
         "name": "Dual Destinies",
         "folder": "DD",
+        "Aj_icon": {
+            "alternateTitle": "Icons",
+            "ripped": "MediumRareChicken",
+            "filename": "Evidence.7z",
+            "filetypes": [
+                "WEBP"
+            ],
+            "override": [
+                "Evidence.7z",
+                "Evidence_2x.7z",
+                "Profiles.7z",
+                "Profiles_2x.7z"
+            ]
+            
+        },
+        "TedTonate": {
+            "alternateTitle": "Ted Tonate",
+            "ripped": "in1tiate",
+            "filename": "Tonate.7z",
+            "filetypes": [
+                "GIF",
+                "WEBP"
+            ]
+        },
+        "YuriCosmos": {
+            "alternateTitle": "Yuri Cosmos",
+            "ripped": "An Englishman",
+            "filename": "Cosmos.7z",
+            "filetypes": [
+                "GIF",
+                "WEBP"
+            ]
+        },
+        "Herman": {
+            "alternateTitle": "Herman Crab",
+            "ripped": "Lemdavid",
+            "filename": "Herman.7z",
+            "filetypes": [
+                "GIF",
+                "WEBP"
+            ]
+        },
         "Bobby": {
+            "alternateTitle": "Bobby Fulbright",
             "ripped": "in1tiate",
             "appear": "Dual Destinies",
             "description": "",
@@ -146,6 +284,7 @@
         "name": "SOJ",
         "folder": "SOJ",
         "Phoenix": {
+            "alternateTitle": "Phoenix Wright",
             "ripped": "Jay Faraday",
             "appear": "PLvsPW-4",
             "description": "",
@@ -155,7 +294,17 @@
                 "GIF"
             ]
         },
+        "Inga": {
+            "alternateTitle": "Inga Karkhuul Haw'kohd Dis'nahm Bi'ahni Lawga Ormo Pohmpus Da'nit Ar'edi Iz Khura'in III",
+            "ripped": "Kathy Asougi",
+            "filename": "Inga.7z",
+            "filetypes": [
+                "WEBP",
+                "GIF"
+            ]
+        },
         "Soj_icons": {
+            "alternateTitle": "Icons",
             "ripped": "idaot",
             "link": [
                 {
@@ -177,6 +326,7 @@
             ]
         },
         "Apollo": {
+            "alternateTitle": "Apollo Justice",
             "ripped": "Jay Faraday",
             "appear": "PLvsPW-4",
             "description": "",
@@ -197,6 +347,7 @@
             ]
         },
         "Ema": {
+            "alternateTitle": "Ema Skye",
             "ripped": "Jay Faraday",
             "appear": "PLvsPW-4",
             "description": "",
@@ -207,6 +358,7 @@
             ]
         },
         "Larry": {
+            "alternateTitle": "Larry Butz",
             "ripped": "Jay Faraday",
             "appear": "PLvsPW-4",
             "description": "",
@@ -220,11 +372,41 @@
     "dgs1+2": {
         "name": "DGS 1+2",
         "folder": "DGS2",
-        "Yuujin": {
-            "filename": "Yuujin-Mikotoba.rar"
+        "Ryuu": {
+            "alternateTitle": "Ryunosuke Naruhodo",
+            "ripped": "Light",
+            "filename": "Ryunosuke Naruhodo.7z",
+            "filetypes": [
+                "WEBP",
+                "GIF"
+            ]
         },
-        "Haori": {
-            "filename": "Haori.zip"
+        "AsogiDefenseDLC": {
+            "alternateTitle": "Asogi Defense (DLC)",
+            "ripped": "Light",
+            "filename": "Asogi Defense DLC.7z",
+            "filetypes": [
+                "WEBP",
+                "GIF"
+            ]
+        },
+        "TobiasGregson": {
+            "alternateTitle": "Tobias Gregson",
+            "ripped": "Lemdavid",
+            "filename": "Gregson.7z",
+            "filetypes": [
+                "WEBP",
+                "GIF"
+            ]
+        },
+        "Windibank": {
+            "alternateTitle": "Hatch Windibank",
+            "ripped": "Lemdavid",
+            "filename": "Windibank.7z",
+            "filetypes": [
+                "WEBP",
+                "GIF"
+            ]
         }
     }
 
