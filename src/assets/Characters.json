@@ -372,24 +372,6 @@
     "dgs1+2": {
         "name": "DGS 1+2",
         "folder": "DGS2",
-        "Ryuu": {
-            "alternateTitle": "Ryunosuke Naruhodo",
-            "ripped": "Light",
-            "filename": "Ryunosuke Naruhodo.7z",
-            "filetypes": [
-                "WEBP",
-                "GIF"
-            ]
-        },
-        "AsogiDefenseDLC": {
-            "alternateTitle": "Asogi Defense (DLC)",
-            "ripped": "Light",
-            "filename": "Asogi Defense DLC.7z",
-            "filetypes": [
-                "WEBP",
-                "GIF"
-            ]
-        },
         "TobiasGregson": {
             "alternateTitle": "Tobias Gregson",
             "ripped": "Lemdavid",
