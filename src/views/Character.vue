@@ -7,16 +7,16 @@
     <div class="outer-container">
       <div class="container">
       
-        <h1 id="character-name">{{ getCharacterName() }}</h1>
-        <div v-if="hasLink()">
+        <h1 id="character-name">{{characterName}}</h1>
+        <!-- <div v-if="hasLink()">
           <div class="link-ripper">
             Ripped by: {{ ripped }} |
             <span v-for="l in link" :key="l">
               <a :href="l[getKey(l)]" class="link-ripper">{{ getKey(l)[0] }}</a>
             </span>
           </div>
-        </div>
-        <h1 v-else id="ripper-name">Ripped By: {{ ripped }}</h1>
+        </div> -->
+        <h1 id="ripper-name">Ripped By: {{ ripped }}</h1>
 
         <!-- Overrides -->
         <div v-if="hasOverride()" class="download-options">
@@ -32,12 +32,13 @@
         <!-- Regular Assets -->
         <div v-else class="download-options">
           <a
-            :href="s3BucketPath(character, type)"
             class="button"
-            v-for="type in filetypes"
+            v-for="type in Object.keys(characterData.downloads)"
+            :href="characterData.downloads[type]"
             :key="type"
-            >{{ type }}</a
-          >
+            >
+            {{ type }}
+          </a>
           <div class="tooltip">
             What's the difference?
             <span class="tooltiptext"
@@ -58,66 +59,65 @@
 </template>
 
 <script>
-import Characters from "../assets/Characters.json";
-
+// import Characters from "../assets/Characters.json";
+import axios from "axios"
 export default {
   data() {
     return {
       fileUrl: "https://dxf1sbhzncqmd.cloudfront.net",
-      characterEpisode: this.$route.params.characterEpisode,
-      character: this.$route.params.character
-  };
+      game: this.$route.params.characterEpisode,
+      characterNameURL: this.$route.params.character,
+      characterData: {},
+      
+        };
   },
   methods: {
+    getCharacter() {
+      axios.get('https://strapi.mabry.dev/ripping-resources').then((res) => {
+        var gameData = res.data
+        const selectedGame = gameData.filter(games => this.game.toUpperCase() == games.name.toUpperCase())[0]
+        this.characterData = selectedGame.characters.filter(character => character.name === this.characterNameURL)[0]
+        console.log(selectedGame.characters.filter(character => character.name === this.characterNameURL))
+        })
+    },
     getCharacterName: function() {
-      return Characters[this.$route.params.characterEpisode][this.$route.params.character].alternateTitle ? Characters[this.$route.params.characterEpisode][this.$route.params.character].alternateTitle : this.$route.params.character
+      // return Characters[this.$route.params.characterEpisode][this.$route.params.character].alternateTitle ? Characters[this.$route.params.characterEpisode][this.$route.params.character].alternateTitle : this.$route.params.character
     },
     hasOverride: function () {
-      return Characters[this.characterEpisode][this.character].override;
-    },
-    hasLink: function () {
-      return Characters[this.characterEpisode][this.character].link;
+      // return Characters[this.characterEpisode][this.character].override;
     },
     getKey: function (item) {
-      return Object.keys(item);
     },
-    s3BucketPathOverride: function (item) {
-      let folder = Characters[this.$route.params.characterEpisode].folder;
-      return `${this.fileUrl}/${folder}/${item}`;
-    },
+    s3BucketPathOverride: function (item) {    },
     s3BucketPath: function (item, type) {
-      let folder = Characters[this.$route.params.characterEpisode].folder;
-      let filename =
-        Characters[this.$route.params.characterEpisode][item].filename;
-      return `${this.fileUrl}/${folder}/${type}_${filename}`;
     },
+  },
+  mounted() {
+    this.getCharacter();
   },
   computed: {
     description() {
-      return Characters[this.characterEpisode][this.character].description;
+      // return Characters[this.characterEpisode][this.character].description;
     },
     link() {
-      return Characters[this.characterEpisode][this.character].link;
+      // return Characters[this.characterEpisode][this.character].link;
     },
     ripped() {
-      return Characters[this.characterEpisode][this.character].ripped;
+      return this.characterData.rippedBy ? this.characterData.rippedBy : 'Nobody Special'
+      // return Characters[this.characterEpisode][this.character].ripped;
     },
     appear() {
-      return Characters[this.characterEpisode][this.character].appear;
+      // return Characters[this.characterEpisode][this.character].appear;
     },
     overrides() {
-      return Characters[this.characterEpisode][this.character].override;
-    },
-    fullbody() {
-      try {
-        return require("../assets/" + this.character + "-fullbody.webp");
-      } catch {
-        return "";
-      }
+      // return Characters[this.characterEpisode][this.character].override;
     },
     filetypes() {
-      return Characters[this.characterEpisode][this.character].filetypes;
+      // return Characters[this.characterEpisode][this.character].filetypes;
     },
+    characterName() {
+      return this.characterData.name
+    }
   },
 };
 </script>
