@@ -65,7 +65,7 @@ export default {
   },
   methods: {
     getCharacters() {
-      axios.get('https://strapi.mabry.dev/ripping-resources').then((res) => {
+      axios.get('https://strapi.mabry.dev/ripping-resources?_sort=gameOrder').then((res) => {
         this.games = res.data.map(game => { return{
           "name": game.name,
           "iconUrl": game.gameIconURL
