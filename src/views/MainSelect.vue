@@ -3,15 +3,17 @@
     <router-link to="/">Back</router-link>
 
     <div class="container">
-      <div v-for="item in allCharacters" :key="item.id" class="div-container">
+      <div v-for="game in games" :key="game.id" class="div-container">
         <router-link
-          v-if="isUnavailable(item) === false"
-          :to="{ name: 'Episode', params: { characterEpisode: item } }"
+          :to="{ name: 'Episode', params: { characterEpisode: game.name } }"
           class="link-title"
         >
-          <img :src="imageName(item)" class="tile-image" :alt="item" />
+
+        <!-- <h1>{{getCharactersFromGame(item)}}</h1> -->
+          <img :src="game.iconUrl" class="tile-image" :alt="game" />
         </router-link>
-        <router-link v-else :to="{}" class="link-title mobile-unavailable">
+        <!-- <router-link v-else :to="{}" class="link-title mobile-unavailable">
+          
           <img
             :src="imageName(item)"
             :class="{ is_unavailable: isUnavailable(item) }"
@@ -19,7 +21,7 @@
             :alt="item"
           />
           <div>{{ item }} is currently unavailable</div>
-        </router-link>
+        </router-link> -->
       </div>
     </div>
 
@@ -27,28 +29,21 @@
     <transition name="fade" mode="out-in">
       <div v-if="doesCharacterEpisodeExist" class="container">
         <transition-group name="list-complete" class="list-transition">
-          <template v-for="item in charactersInEpisode">
+         
+          <template v-for="character in charactersInEpisode()">
+            {{character}}
             <router-link
-              :to="item"
-              :key="item"
+              :to="character.name"
+              :key="character.name"
               class="link"
               append
-              v-if="advanceExist(item)"
             >
               <img
-                :src="imageName(item)"
+                :src="character.iconURL"
                 class="character-image"
-                :alt="item"
+                :alt="character.name"
               />
             </router-link>
-            <a :href="s3BucketPath(item)" :key="item" class="link" v-else>
-              <img
-                :src="imageName(item)"
-                class="character-image"
-                :alt="item"
-                @error="imageLoadError"
-              />
-            </a>
           </template>
         </transition-group>
       </div>
@@ -57,58 +52,76 @@
 </template>
 
 <script>
-import Characters from "../assets/Characters.json";
+import axios from "axios"
+
 export default {
   data() {
     return {
       fileUrl: "https://ripping-resource.s3.amazonaws.com",
       selectedCharacterPath: "",
+      characters: [],
+      games: {}
     };
   },
   methods: {
-    advanceExist(item) {
-      if (
-        Object.keys(
-          Characters[this.$route.params.characterEpisode][item]
-        ).includes("ripped")
-      ) {
-        return true;
+    getCharacters() {
+      axios.get('https://strapi.mabry.dev/ripping-resources').then((res) => {
+        this.games = res.data.map(game => { return{
+          "name": game.name,
+          "iconUrl": game.gameIconURL
+          }
+        })
+        this.characters = res.data
+        })
+    },
+        charactersInEpisode() {
+      if (this.characters.length != 0 && this.$route.params.characterEpisode) {
+        const game = this.$route.params.characterEpisode
+        const characters = this.getCharactersFromGame(game)
+        if (Object.keys(characters).includes('characters')) {
+          return characters['characters']
+        }
+        // let allKeys = Object.keys(
+        //   Characters[this.$route.params.characterEpisode]
+        // );
+        // let removeName = allKeys.splice(0, 2);
+        // return allKeys;
       } else {
-        return false;
+        return [];
       }
     },
-    imageLoadError() {
-      console.log("Error loading image");
-    },
-    isUnavailable(game) {
-      if (
-        [
-          "investigations2",
-        ].includes(game)
-      ) {
-        return true;
+    getCharactersFromGame(game) {
+      if (!this.characters) {
+        return {}
       }
-      return false;
+      return this.characters.filter(games => game.toUpperCase() == games.name.toUpperCase())[0]
     },
-    s3BucketPath: function (item) {
-      let folder = Characters[this.$route.params.characterEpisode].folder;
-      let filename =
-        Characters[this.$route.params.characterEpisode][item].filename;
-      return `${this.fileUrl}/${folder}/${filename}`;
-    },
-    imageExist(name) {},
-    imageName(name) {
-      try {
-        return require("../assets/" + name + ".webp");
-      } catch {
-        return "";
-      }
-    },
+  },
+  mounted() {
+    this.getCharacters()
   },
   computed: {
     selectedEpisode() {
       if (this.$route.params.characterEpisode) {
-        return Characters[this.$route.params.characterEpisode].name;
+
+        // if (this.characters == undefined) {
+        //   return ''
+        // }
+        // const characters = this.getCharactersFromGame(this.$route.params.characterEpisode)
+        // if (characters && Object.keys(characters).includes('characters')){
+        //   const char =  characters['characters']
+        // }  
+        console.log(this.$route.params.characterEpisode)
+
+        return this.$route.params.characterEpisode
+        // const game =  this.characters[this.$route.params.characterEpisode];
+        // console.log(Object.keys(game))
+        // if ('name' in Object.keys(game)) {
+          
+        //   return game.name
+        // } else {
+        //   return ""
+        // }
       } else {
         return "";
       }
@@ -124,17 +137,7 @@ export default {
         return true;
       }
     },
-    charactersInEpisode() {
-      if (this.$route.params.characterEpisode) {
-        let allKeys = Object.keys(
-          Characters[this.$route.params.characterEpisode]
-        );
-        let removeName = allKeys.splice(0, 2);
-        return allKeys;
-      } else {
-        return [];
-      }
-    },
+
   },
 };
 </script>
