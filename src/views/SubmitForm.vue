@@ -3,6 +3,10 @@
     <div>
       <router-link to="/">Back</router-link>
     </div>
+    <div class="container" style="text-align: center" v-if="hasError">
+      <h1>Looks like we had an error accepting your submission</h1>
+      <p style="color: white; padding: 25px">{{ errorMessage }}</p>
+    </div>
     <div class="container" v-if="notSubmitted">
       <form onsubmit="return false">
         <div class="question" id="question_1">
@@ -42,6 +46,8 @@ export default {
       char: "",
       ripLink: "",
       ip: "",
+      errorMessage: "",
+      hasError: false,
       notSubmitted: true,
     };
   },
@@ -57,21 +63,28 @@ export default {
   },
   methods: {
     submit: function () {
+      let output = "";
+      this.hasError = false;
+      axios.defaults.headers.post["Access-Control-Allow-Origin"] = "*";
       axios
-        .post("https://morning-accidental-angora.glitch.me/form-submit", {
-          credit: this.credit,
-          char: this.char,
-          ripLink: this.ripLink,
-          ip: this.ip,
+        .post(
+          "https://slblvzpv4d3lunoamgslxjqwvm0bcxor.lambda-url.us-east-1.on.aws/form-submit",
+          {
+            credit: this.credit,
+            char: this.char,
+            ripLink: this.ripLink,
+            ip: this.ip,
+          }
+        )
+        .then((res) => {
+          output = res;
+          this.notSubmitted = false;
         })
-        .then(function (response) {
-          console.log(response);
-        })
-        .catch(function (error) {
-          console.log(error);
+        .catch((err) => {
+          this.errorMessage = err;
+          this.hasError = true;
+          output = err;
         });
-      this.notSubmitted = false;
-      console.log(this.credit, this.char, this.ripLink);
     },
   },
 };
