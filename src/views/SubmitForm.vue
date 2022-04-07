@@ -72,13 +72,11 @@ export default {
           ip: this.ip,
         })
         .then((res) => {
-          output = res;
           this.notSubmitted = false;
         })
         .catch((err) => {
           this.errorMessage = err;
           this.hasError = true;
-          output = err;
         });
     },
   },
