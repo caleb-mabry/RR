@@ -63,19 +63,14 @@ export default {
   },
   methods: {
     submit: function () {
-      let output = "";
       this.hasError = false;
-      axios.defaults.headers.post["Access-Control-Allow-Origin"] = "*";
       axios
-        .post(
-          "https://slblvzpv4d3lunoamgslxjqwvm0bcxor.lambda-url.us-east-1.on.aws/form-submit",
-          {
-            credit: this.credit,
-            char: this.char,
-            ripLink: this.ripLink,
-            ip: this.ip,
-          }
-        )
+        .post("https://pcl3ttpp9l.execute-api.us-east-1.amazonaws.com/prod/", {
+          credit: this.credit,
+          char: this.char,
+          ripLink: this.ripLink,
+          ip: this.ip,
+        })
         .then((res) => {
           output = res;
           this.notSubmitted = false;
